@@ -1,0 +1,38 @@
+{
+  "name": "search_server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Hauke Bartsch",
+  "license": "ISC",
+  "dependencies": {
+    "assert-plus": "^1.0.0",
+    "async": "^2.6.0",
+    "aws-sign2": "^0.7.0",
+    "aws4": "^1.6.0",
+    "caseless": "^0.12.0",
+    "extend": "^3.0.1",
+    "forever-agent": "^0.6.1",
+    "form-data": "^2.3.2",
+    "formidable": "^1.1.1",
+    "har-validator": "^5.1.0",
+    "hawk": "^7.0.7",
+    "is-typedarray": "^1.0.0",
+    "isstream": "^0.1.2",
+    "jquery": "^3.3.1",
+    "json-stringify-safe": "^5.0.1",
+    "jsprim": "^2.0.0",
+    "oauth-sign": "^0.8.2",
+    "performance-now": "^2.1.0",
+    "qs": "^6.5.1",
+    "socket.io": "^2.0.4",
+    "stopword": "^0.1.10",
+    "stringstream": "0.0.5",
+    "synonyms": "^1.0.1",
+    "tough-cookie": "^2.3.4",
+    "tunnel-agent": "^0.6.0"
+  }
+}

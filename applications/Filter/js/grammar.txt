@@ -1,0 +1,316 @@
+{
+    // return the entry in the table that corresponds to this variable
+    window.cacheFindIndex = new Array();
+    function findIndex( what ) {
+	var w = what;
+	if (w in cacheFindIndex) {
+	    return cacheFindIndex[w];
+	}
+	for (var i = 0; i < header.length; i++) {
+	    if (header[i] == w) {
+		cacheFindIndex[w] = i; //console.log('add ' + w + ' to cache');
+	        return i;
+            }
+	}
+	return false;
+    }
+    
+    if (typeof(window.cacheNumVisits) == 'undefined')
+	window.cacheNumVisits = {};
+    
+    // return what number visit this is (return string), counting starts with 0
+    // if a variable is supplied count which visit this is that has this variable
+    function visitOrder( variable ) {
+	//console.log("called visitOrder with variable: " + variable);
+	// find the idx of VisitID
+	var idxVisitID   = findIndex( "eventname"   );
+	var idxSubjID    = findIndex( "src_subject_id"    );
+	var idxVar       = findIndex( variable    );
+	var sortByDate   = false;
+	if (idxVar === false) { // default value is StudyDate
+            idxVar = findIndex( "age" );
+            sortByDate = true;
+	}
+	if (idxVisitID !== false
+            && idxSubjID !== false
+            && idxVar !== false) {
+            var visitIDs = new Array();
+            var currentSubj = allMeasures[bla][idxSubjID];
+            var currentDate = allMeasures[bla][idxVar];
+            if (currentDate == "NA") {
+		//console.log("no StudyDate for " + allMeasures[bla][idxSubjID] + ", " + allMeasures[bla][idxVisitID]);
+		return -1; // did not work
+            }
+	    
+            var key = "visitOrder_" + variable;
+            if (typeof(window.cacheNumVisits[key]) !== 'undefined' &&
+		typeof(window.cacheNumVisits[key][currentSubj]) !== 'undefined' &&
+		typeof(window.cacheNumVisits[key][currentSubj][currentDate]) !== 'undefined') {
+		return window.cacheNumVisits[key][currentSubj][currentDate];
+            }
+	    
+            for (var i = 0; i < allMeasures.length; i++) {
+		if (allMeasures[i][idxSubjID] == currentSubj) {
+		    visitIDs.push([ i, allMeasures[i][idxVar] ]);
+		}
+            }
+            // sort the dates
+            function sortdates(a,b) {
+		var yearA  = a.slice(0,4);
+		var monthA = a.slice(4,6);
+		var dayA   = a.slice(6,8);
+		var yearB  = b.slice(0,4);
+		var monthB = b.slice(4,6);
+		var dayB   = b.slice(6,8);
+		return (Date.UTC(yearA, monthA, dayA)) < (Date.UTC(yearB, monthB, dayB));
+            }
+            if (sortByDate)
+		visitIDs.sort(sortdates);
+            else
+		visitIDs.sort();
+	    
+            if (typeof(window.cacheNumVisits[key]) === 'undefined'){
+		window.cacheNumVisits[key] = {};
+            }
+            if (typeof(window.cacheNumVisits[key][currentSubj]) === 'undefined'){
+		window.cacheNumVisits[key][currentSubj] = {};
+            }
+            for (var i = 0; i < visitIDs.length; i++) {
+		if (visitIDs[i][1] == "NA")
+		    window.cacheNumVisits[key][currentSubj][visitIDs[i][1]] = -1;
+		else
+		    window.cacheNumVisits[key][currentSubj][visitIDs[i][1]] = i;
+            }
+	    
+            // return what the current date is in the order of dates
+            for (var i = 0; i < visitIDs.length; i++) {
+		if (visitIDs[i][1] == currentDate) {
+		    return i;
+		}
+            }
+	}
+	return -1; // did not work
+    }
+    
+    
+    // if a variable is supplied count how many visits have this variable for the current subject
+    function numVisits( variable ) {
+	//console.log("called numVisits with variable: " + variable);
+	var idxSubjID = findIndex( "src_subject_id" );
+	var idxVar    = findIndex( variable );
+	if (idxVar === false) {
+            idxVar = findIndex("age");
+	}
+	
+	if (idxSubjID !== false) {
+            var numVisits = 0;
+            var currentSubj = allMeasures[bla][idxSubjID];
+            var currentVar;
+	    
+            var key = 'numVisits_' + variable;
+            if (typeof(window.cacheNumVisits[key]) !== 'undefined' &&
+		typeof(window.cacheNumVisits[key][currentSubj]) !== 'undefined') {
+		return window.cacheNumVisits[key][currentSubj];
+            }
+	    
+            for (var i = 0; i < allMeasures.length; i++) {
+		if (allMeasures[i][idxSubjID] == currentSubj) {
+		    if (idxVar !== false) 
+			currentVar = allMeasures[i][idxVar];
+		    if (idxVar === false) // no variable was supplied, count everything
+			numVisits++;
+		    else if ( currentVar !== "NA" ) // variable was supplied is not NA
+			numVisits++;
+		}
+            }
+            if (typeof(window.cacheNumVisits[key]) == 'undefined')
+		window.cacheNumVisits[key] = {};
+            window.cacheNumVisits[key][currentSubj] = numVisits;
+            return numVisits;
+	}
+	return 0;
+    }
+}
+
+start
+  = equal
+
+equal
+  = left:or __ "==" __ right:equal { return left !== right; }
+  / left:or __ "=" __ right:equal { return left !== right; }
+  / or
+
+or
+  = left:primary __ "or" __ right:or { return left || right; }
+  / left:primary __ "and" __ right:equal { return left && right; }
+  / left:primary __ "<>" __ right:nequal { return left !== right; }
+  / left:primary __ "==" __ right:primary { return left === right; }
+  / left:primary __ "=" __ right:primary { return left === right; }
+  / left:primary __ "+" __ right:primary { return left + right; }
+  / left:primary __ "-" __ right:primary { return left - right; }
+  / left:primary __ "*" __ right:primary { return left * right; }
+  / left:primary __ "/" __ right:primary { return left / right; }
+  / left:primary __ ">=" __ right:primary { return left >= right; }
+  / left:primary __ "<=" __ right:primary { return left <= right; }
+  / left:primary __ ">" __ right:primary { return left > right; }
+  / left:primary __ "<" __ right:primary { return left < right; }
+  / primary
+
+and
+  = left:primary __ "and" __ right:or { return left && right; }
+  / primary
+
+nequal
+  = left:primary __ "<>" __ right:nequal { return left !== right; }
+  / primary
+
+primary
+  = number
+  / "not" __ "(" __ equal:equal __ ")" { return !equal; }
+  / "has" __ "(" __ variable:variable __ ")" { return (typeof variable !== "undefined") && (variable !== "") && (variable !== "NA"); }
+  / "visit" __ "(" __ ")" { return visitOrder(); }
+  / "numVisits" __ "(" __ ")" { return numVisits(); }
+  / "visit" __ "(" __ name:measure __ ")" { return visitOrder( name ); }
+  / "numVisits" __ "(" __ name:measure __ ")" { return numVisits( name ); }
+  / "(" __ equal:equal __ ")" { return equal; }
+  / variable
+
+number
+  = int_:int frac:frac exp:exp __ { return parseFloat(int_ + frac + exp); }
+  / int_:int frac:frac __ { return parseFloat(int_ + frac); }
+  / int_:int exp:exp __ { return parseFloat(int_ + exp); }
+  / int_:int __ { return parseFloat(int_); }
+
+int
+  = digit19:digit19 digits:digits { return digit19 + digits; }
+  / digit:digit
+  / op:("-" / "+" ) digit19:digit19 digits:digits { return "-" + digit19 + digits; }
+  / op:("-" / "+" ) digit:digit { return "-" + digit; }
+
+frac
+  = "." digits:digits { return "." + digits; }
+
+exp
+  = e:e digits:digits { return e + digits; }
+
+digits
+  = digits:digit+ { return digits.join(""); }
+
+digit = [0-9]
+digit19 = [1-9]
+
+e
+  = e:[eE] sign:[+-]? { return e + sign; }
+
+
+variable "variable"
+  = meas:( ('"' double_char* '"')
+  /        ("'" single_char* "'") ) {
+        var idx = 0;
+	var varname = "";
+        if (meas.length != 3) {
+	   idx = findIndex(meas.join(""));
+	   varname = meas.join("");
+        } else {
+           idx = findIndex(meas[1].join(""));
+	   varname = meas[1].join("");
+	}
+        if (idx == false) { // return the value itself if we cannot find this as a variable
+           //console.log("warning: could not find " + meas.join(""));
+           if (meas.length != 3) {
+              return meas.join("");
+           }
+           return meas[1].join("");
+        }
+        console.log("in brackets got bla: " + bla + "and index: " + idx + " meas: " + JSON.stringify(meas) + "return varname:" + varname + " " + JSON.stringify(allMeasures[varname][bla]));
+        return allMeasures[varname][bla];
+    }
+  /  mea:( ('\$' [A-Za-z0-9\._]+) ) {
+        var idx = findIndex(mea[1].join(""));
+	var varname = mea[1].join("");
+        if (idx == false) { // return the value itself, same as above but with dollar sign
+           return mea[1].join("");
+        }
+        console.log("WIth a dollar sign, got bla: " + bla + "and index: " + idx + " meas: " + JSON.stringify(mea));
+        return allMeasures[varname][bla];
+  }
+  /  mea:( ( [A-Za-z] [A-Za-z0-9\._]+ ) ) {
+        var idx = findIndex(mea[0] + mea[1].join(""));
+        var varname = mea[0] + mea[1].join("");
+        if (header.indexOf(varname) == -1) {
+  	   return "";
+        }
+        //if (idx == false) { // try this without double quotes
+        //   return "";
+        //}
+        console.log("mea: a variable! got bla: " + bla + "and index: " + idx + " for mea of " + JSON.stringify(mea));
+        // return allMeasures[bla][idx];
+        return allMeasures[varname][bla];
+  }
+
+
+measure "measure"
+  = meas:( ('"' double_char* '"')
+  /        ("'" single_char* "'") ) {
+        return meas[1].join("");
+        var idx = 0;
+        if (meas.length != 3)
+           idx =  findIndex(meas.join(""));
+        else
+           idx = findIndex(meas[1].join(""));
+        if (idx == false) { // return the value itself if its not a variable BBBBBB
+           if (meas.length != 3) {
+              return meas.join("");
+           }
+           return meas[1].join("");
+        }
+      console.log("in measure got bla: " + bla + "and index: " + idx + " meas: " + JSON.stringify(meas));
+        return allMeasures[bla][idx];
+    }
+  /  mea:( ('\$' [A-Za-z0-9\._]+) ) {
+        return mea[1].join("");
+        var idx = findIndex(mea[1].join(""));
+        if (idx == false) { // return the value itself if its not a variable
+           return mea[1].join("");
+        }
+      console.log("in measure got bla: " + bla + "and index: " + idx);
+        return allMeasures[bla][idx];  
+  }
+  /  mea:( ( [A-Za-z] [A-Za-z0-9\._]+) ) {
+        return mea[0] + mea[1].join("");
+        var idx = findIndex(mea[0] + mea[1].join(""));
+        if (idx == false) { // try this without double quotes
+           return "";
+        }
+      console.log("got bla: " + bla + "and index: " + idx);
+        return allMeasures[bla][idx];
+  }
+
+single_char
+  = [^'\\\0\x1F\x7f]
+  / escape_char
+
+double_char
+  = [^"\\\0\x1F\x7f]
+  / escape_char
+
+space_separated_char
+  = [^ \\\0-\x1F\x7f\>\<\(\)\+\-]
+  / escape_char
+
+escape_char
+  = "\\'" { return "'"; }
+  / '\\"' { return '"'; }
+  / "\\\\" { return "\\"; }
+  / "\\/" { return "/"; }
+  / "\\b" { return "\b"; }
+  / "\\f" { return "\f"; }
+  / "\\n" { return "\n"; }
+  / "\\r" { return "\r"; }
+  / "\\t" { return "\t"; }
+
+__ =
+  whitespace*
+
+whitespace =
+  [ \t\n\r]

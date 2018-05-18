@@ -1,0 +1,185 @@
+
+body {
+        padding-top: 60px; /* 60px to make the container go all the way to the bottom of the topbar */
+        background-color: black !important;
+        line-height: 14px !important;
+        font-size: 14px !important;
+        font-weight: 200 !important;
+}
+
+.datas {
+   background-color: black;
+   display: inline;
+   position: relative;
+}
+.data {
+   background-color: #888888;
+   border: 1px solid #666666;
+   border-radius: 3px;
+   min-width: 7px;
+   min-height: 7px;
+   margin-top: 2px;
+   margin-right: 4px;
+   display: inline-block;
+   position: relative;
+   padding-top: 10px;
+}
+#all {
+   margin-top: 15px;   
+}
+.select {
+   position: relative;
+   //top: -50px;
+   background-color: #222222;
+   opacity: 0.8;
+   //line-height: 50px;
+   color: white;
+   padding-left: 10px;
+   font-weight: 200;
+   font-size: 20px;
+   padding-top: 9px;
+   padding-bottom: 0px;
+   padding-right:10pt;
+}
+.select input {
+   background-color: #222222;
+   color: #FFFFFF;
+   margin-left: 10px;
+   margin-right: 10px;
+   font-weight: 200;
+   font-size: 20px;
+   padding-top: 2px;
+}
+
+/* Animation keyframes - you need to add prefixes */
+@keyframes spin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+ 
+/* Loading animation container */
+.loading {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 28px;
+    height: 28px;
+    margin: -14px 0 0 -14px;
+}
+ 
+/* Spinning circle (inner circle) */
+.loading .maskedCircle {
+    width: 20px;
+    height: 20px;
+    border-radius: 12px;
+    border: 3px solid white;
+}
+ 
+/* Spinning circle mask */
+.loading .mask {
+    width: 12px;
+    height: 12px;
+    overflow: hidden;
+}
+ 
+/* Spinner */
+.loading .spinner {
+    position: absolute;
+    left: 1px;
+    top: 1px;
+    width: 26px;
+    height: 26px;
+    animation: spin 1s infinite linear;
+}
+.q0-9 { background-color:rgb(247,251,255); }
+.q1-9 { background-color:rgb(222,235,247); }
+.q2-9 { background-color:rgb(198,219,239); }
+.q3-9 { background-color:rgb(158,202,225); }
+.q4-9 { background-color:rgb(107,174,214); }
+.q5-9 { background-color:rgb(66,146,198); }
+.q6-9 { background-color:rgb(33,113,181); }
+.q7-9 { background-color:rgb(8,81,156); }
+.q8-9 { background-color:rgb(8,48,107); }
+.spot {
+   //background-color: #AAAAAA;
+   //border: 1px solid #666666;
+   width: 7px;
+   height: 7px;
+   //display: inline-flex;
+   position: relative;
+   border-radius: 3px;
+   margin-bottom: 2px;
+}
+.ui-autocomplete {
+   height: 250px;
+   overflow-y: auto;
+}
+[draggable=true] {
+  cursor: move;
+}
+.Yea {
+   position: absolute;
+   top: 10px;
+   left: 20px;
+   font-size: 20pt;
+   font-weight: 200;
+   line-height: 25px;
+   text-align: right;
+   color: white;
+   background-color: rgba(20,20,20,.8);
+   padding: 10px;
+}
+.Nay {
+   position: absolute;
+   top: 10px;
+   left: 20px;
+   font-size: 20pt;
+   font-weight: 200;
+   color: white;
+   line-height: 25px;
+   text-align: right;
+   background-color: rgba(20,20,20,.8);
+   padding: 10px;
+}
+.yes {
+  position: relative;
+}
+.no {
+  position: relative;
+}
+.info {
+  font-size: small;
+  display: inline;
+  margin-right: 10px;
+  color: grey;
+}
+#info {
+  margin-bottom: -4px;
+  padding-bottom: 4px;
+}
+.existingFilters {
+  margin-top: 10px;
+}
+.sectionTitle {
+  color: white;
+  font-size: small;
+  font-weight: 200;
+  margin-bottom: 5px;
+  line-height: 12pt;
+}
+#saveNewFilter {
+  background-color: #222222;
+  color: #808080;
+  font-weight: 200;
+  font-size: 14pt;
+}
+.selectpicker {
+  //height: 32px;
+  //font-weight: 200 !important;
+}
+.highslide-body {
+  line-height: 20px;
+}
+#start {
+    margin-bottom: 20px;
+}

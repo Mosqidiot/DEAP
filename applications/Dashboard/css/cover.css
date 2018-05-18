@@ -1,0 +1,120 @@
+a, a:focus, a:hover {
+    color: #FFFFFF;
+}
+.btn-default, .btn-default:hover, .btn-default:focus {
+    background-color: #FFFFFF;
+    border: 1px solid #FFFFFF;
+    color: #333333;
+    text-shadow: none;
+}
+html, body {
+    background-color: #333333;
+    height: 100%;
+}
+body {
+    box-shadow: 0 0 100px rgba(0, 0, 0, 0.5) inset;
+    color: #FFFFFF;
+    text-align: center;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+}
+.site-wrapper {
+    display: table;
+    height: 100%;
+    min-height: 100%;
+    width: 100%;
+}
+.site-wrapper-inner {
+    display: table-cell;
+    vertical-align: top;
+}
+.cover-container {
+    margin-left: auto;
+    margin-right: auto;
+}
+.inner {
+    padding: 30px;
+}
+.masthead-brand {
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+.masthead-nav > li {
+    display: inline-block;
+}
+.masthead-nav > li + li {
+    margin-left: 20px;
+}
+.masthead-nav > li > a {
+    border-bottom: 2px solid rgba(0, 0, 0, 0);
+    color: rgba(255, 255, 255, 0.75);
+    font-size: 16px;
+    font-weight: bold;
+    padding-left: 0;
+    padding-right: 0;
+}
+.masthead-nav > li > a:hover, .masthead-nav > li > a:focus {
+    background-color: rgba(0, 0, 0, 0);
+    border-bottom-color: rgba(255, 255, 255, 0.25);
+}
+.masthead-nav > .active > a, .masthead-nav > .active > a:hover, .masthead-nav > .active > a:focus {
+    border-bottom-color: #FFFFFF;
+    color: #FFFFFF;
+}
+@media (min-width: 768px) {
+.masthead-brand {
+    float: left;
+}
+.masthead-nav {
+    float: right;
+}
+}
+.cover {
+    padding: 0 20px;
+}
+.cover .btn-lg {
+    font-weight: bold;
+    padding: 10px 20px;
+}
+.mastfoot {
+    color: rgba(255, 255, 255, 0.5);
+}
+@media (min-width: 768px) {
+.masthead {
+    position: fixed;
+    top: 0;
+}
+.mastfoot {
+    bottom: 0;
+    position: fixed;
+}
+.site-wrapper-inner {
+    vertical-align: middle;
+}
+.card {
+   display: inline-table;
+   padding: 5px;
+   margin: 5px;
+   border: 1px solid #555555;
+   border-radius: 5px;
+}
+.card a {
+   text-decoration: none;
+}
+.card:hover {
+    background: #C4C7CE;
+    
+    -webkit-transition: 500ms linear 0s;
+    -moz-transition: 500ms linear 0s;
+    -o-transition: 500ms linear 0s;
+    transition: 500ms linear 0s;
+}
+
+.masthead, .mastfoot, .cover-container {
+    width: 100%;
+}
+}
+@media (min-width: 1200px) {
+.masthead, .mastfoot, .cover-container {
+    width: 1200px;
+}
+}
