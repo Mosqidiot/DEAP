@@ -8,6 +8,7 @@ ARG DEBIAN_FRONTEND=noninteractive
 ENV LANG="en_US.UTF-8" \
     LC_ALL="C.UTF-8" \
     ND_ENTRYPOINT="/deap-startup.sh"
+
 RUN apt-get update -qq && apt-get install -yq --no-install-recommends  \
         apache2 \
         apt-utils \
@@ -62,6 +63,8 @@ RUN if [ ! -f "$ND_ENTRYPOINT" ]; then \
          && echo '  else $*;' >> $ND_ENTRYPOINT \
          && echo '  fi' >> $ND_ENTRYPOINT \
          && echo 'fi' >> $ND_ENTRYPOINT \
+         && echo 'touch /var/www/html/applications/Ontology/searchServer/log.log' >> $ND_ENTRYPOINT \
+         && echo 'chmod a+w /var/www/html/applications/Ontology/searchServer/log.log' >> $ND_ENTRYPOINT \
          && echo 'alias deap="cd /var/www/html/" >> /root/.bashrc;' >> $ND_ENTRYPOINT \
          && echo 'cron' >> $ND_ENTRYPOINT \
          && echo 'apachectl -D FOREGROUND' >> $ND_ENTRYPOINT \
@@ -69,19 +72,11 @@ RUN if [ ! -f "$ND_ENTRYPOINT" ]; then \
        fi \
     && chmod -R 777 /deap-startup.sh
 
-
-
 RUN apt-get update -qq && apt-get install -yq --no-install-recommends \
     r-base \
     r-cran-rserve \
     && apt-get clean \
     && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
-
-# configure the Rserv
-
-# configure index.js
-
-
 
 EXPOSE 80
 ENTRYPOINT ["/deap-startup.sh"]
