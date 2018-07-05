@@ -75,9 +75,19 @@ RUN if [ ! -f "$ND_ENTRYPOINT" ]; then \
 RUN apt-get update -qq && apt-get install -yq --no-install-recommends \
     r-base \
     r-cran-rserve \
+    zlib1g-dev \
     && apt-get clean \
     && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/* \
-    && Rscript -e 'install.packages("gamm4", repos="https://cran.rstudio.com")'
+    && Rscript -e 'install.packages("gamm4", repos="https://cran.rstudio.com")' \
+    && Rscript -e 'install.packages("rjson", repos="https://cran.rstudio.com")' \
+    && Rscript -e 'install.packages("stargazer", repos="https://cran.rstudio.com")' \
+    && Rscript -e 'install.packages("caret", repos="https://cran.rstudio.com")' \
+    && Rscript -e 'install.packages("OpenMx", repos="https://cran.rstudio.com")' \
+    && Rscript -e 'install.packages("knitr", repos="https://cran.rstudio.com")' \
+    && Rscript -e 'install.packages("MuMIn", repos="https://cran.rstudio.com")' \
+    && Rscript -e 'install.packages("R.matlab", repos="https://cran.rstudio.com")' \
+    && Rscript -e 'install.packages("tableone", repos="https://cran.rstudio.com")' 
+
 
 EXPOSE 80
 ENTRYPOINT ["/deap-startup.sh"]
