@@ -76,7 +76,8 @@ RUN apt-get update -qq && apt-get install -yq --no-install-recommends \
     r-base \
     r-cran-rserve \
     && apt-get clean \
-    && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
+    && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/* \
+    && Rscript -e 'install.packages("gamm4", repos="https://cran.rstudio.com")'
 
 EXPOSE 80
 ENTRYPOINT ["/deap-startup.sh"]

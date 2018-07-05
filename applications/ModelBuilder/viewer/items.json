@@ -1,0 +1,274 @@
+[
+    {
+	"name": "NDA17",
+	"id": "data-nda17",
+	"group": "Data",
+	"description": "published release",
+	"inputs": [
+	    { "name": "in1", "type": "constant-text" },
+	    { "name": "in2", "type": "constant-text" },
+	    { "name": "in3", "type": "constant-text" },
+	    { "name": "in4", "type": "constant-text" },
+	    { "name": "in5", "type": "constant-text" },
+	    { "name": "in6", "type": "constant-text" },
+	    { "name": "in7", "type": "constant-text" },
+	    { "name": "in8", "type": "constant-text" },
+	    { "name": "in9", "type": "constant-text" },
+	    { "name": "in10", "type": "constant-text" }
+	],
+	"outputs": [
+	    { "name": "out1", "type": "constant-text" },
+	    { "name": "out2", "type": "constant-text" },
+	    { "name": "out3", "type": "constant-text" },
+	    { "name": "out4", "type": "constant-text" },
+	    { "name": "out5", "type": "constant-text" },
+	    { "name": "out6", "type": "constant-text" },
+	    { "name": "out7", "type": "constant-text" },
+	    { "name": "out8", "type": "constant-text" },
+	    { "name": "out9", "type": "constant-text" },
+	    { "name": "out10", "type": "constant-text" }
+	],
+	"state": [
+	    { "name": "data-source", "type": "text", "default": "NDA17" }	    
+	]
+    },
+    { 
+	"name": "GAMM4",
+	"id": "model-gamm4",
+	"group": "Model",
+	"description": "A GAMM4 model",
+	"inputs": [
+	    { "name": "dep. var.", "type": "constant-text" },
+	    { "name": "ind. var.", "type": "constant-text" },
+	    { "name": "user cov.", "type": "constant-text" },
+	    { "name": "cov. fixed", "type": "constant-text" },	    
+	    { "name": "smo. var", "type": "constant-text" },
+        { "name": "log. var", "type":"constant-text"},
+        { "name": "int. var", "type":"constant-text"},
+        { "name": "sq. var", "type": "constant-text"},
+        { "name": "gr. var", "type": "constant-text"},
+        { "name": "ws. var", "type": "constant-text"},
+	{ "name": "fl. var", "type": "constant-text"}
+	],
+	"outputs": [
+	    { "name": "scatter", "type": "scatter" },
+	    { "name": "statistics", "type": "constant-text" },
+	    { "name": "lineplot", "type": "scatter" },
+	    { "name": "tunnel", "type": "scatter" }
+	],
+	"state": [
+	    { "name": "model", "type": "textarea" }
+	]
+    },
+    { 
+		"name": "R Code",
+		"id": "r-model",
+		"group": "Model",
+		"description": "A general node that can execute R code",
+		"inputs": [
+			{ "name": "in1", "type": "constant-text" },
+			{ "name": "in2", "type": "constant-text" },
+			{ "name": "in3", "type": "constant-text" },
+			{ "name": "in4", "type": "constant-text" },	    
+			{ "name": "in5", "type": "constant-text" },	    
+			{ "name": "in6", "type": "constant-text" },	    
+			{ "name": "in7", "type": "constant-text" },	    
+			{ "name": "in8", "type": "constant-text" }	    
+		],
+		"outputs": [
+			{ "name": "out1", "type": "constant-text" },
+			{ "name": "out2", "type": "constant-text" },
+			{ "name": "out3", "type": "constant-text" },
+			{ "name": "out4", "type": "constant-text" },	    
+			{ "name": "out5", "type": "constant-text" },	    
+			{ "name": "out6", "type": "constant-text" },	    
+			{ "name": "out7", "type": "constant-text" },	    
+			{ "name": "out8", "type": "constant-text" }	    
+		],
+		"state": [
+			{ "name": "model", "type": "textarea" }
+		]
+    },
+    { 
+	"name": "Imputation",
+	"id": "impute-mice",
+	"group": "Model",
+	"description": "Impute the input data frames and create resulting data frames ",
+	"inputs": [
+	    { "name": "in1", "type": "constant-text" },
+	    { "name": "in2", "type": "constant-text" },
+	    { "name": "in3", "type": "constant-text" },
+	    { "name": "in4", "type": "constant-text" },	    
+	    { "name": "in5", "type": "constant-text" },	    
+	    { "name": "in6", "type": "constant-text" },	    
+	    { "name": "in7", "type": "constant-text" },	    
+	    { "name": "in8", "type": "constant-text" }	    
+	],
+	"outputs": [
+	    { "name": "out1", "type": "constant-text" },
+	    { "name": "out2", "type": "constant-text" },
+	    { "name": "out3", "type": "constant-text" },
+	    { "name": "out4", "type": "constant-text" },	    
+	    { "name": "out5", "type": "constant-text" },	    
+	    { "name": "out6", "type": "constant-text" },	    
+	    { "name": "out7", "type": "constant-text" },	    
+	    { "name": "out8", "type": "constant-text" }	    
+	],
+	"state": [
+	    { "name": "method1", "type": "text" },
+	    { "name": "method2", "type": "text" },
+	    { "name": "method3", "type": "text" },
+	    { "name": "method4", "type": "text" },
+	    { "name": "method5", "type": "text" },
+	    { "name": "method6", "type": "text" },
+	    { "name": "method7", "type": "text" },
+	    { "name": "method8", "type": "text" }
+	]
+    },
+    {
+	"name": "Measure All (single)",
+	"id": "measure-single",
+	"group": "Input",
+	"description": "input",
+	"inputs": [],
+	"outputs": [
+	    { "name": "out", "type": "constant-text" }
+	],
+	"state": [
+	    { "name": "id", "type": "text" },
+	    { "name": "name", "type": "text" },
+	    { "name": "default", "type": "text" },
+	    { "name": "value", "type": "text" }
+	]
+    },
+    {
+	"name": "Measure All (multi)",
+	"id": "measure-all-multi",
+	"group": "Input",
+	"description": "input",
+	"inputs": [],
+	"outputs": [
+	    { "name": "out", "type": "constant-text" }
+	],
+	"state": [
+	    { "name": "id", "type": "text" },
+	    { "name": "name", "type": "text" },
+	    { "name": "default", "type": "text" },
+	    { "name": "value", "type": "text" }
+	]
+    },
+    { 
+	"name": "Measure Fixed",
+	"id": "measure-fixed",
+	"group": "Input",
+	"description": "input",
+	"inputs": [],
+	"outputs": [
+	    { "name": "out", "type": "constant-text" }
+	],
+	"state": [
+	    { "name": "id", "type": "text" },
+	    { "name": "name", "type": "text" },
+	    { "name": "default", "type": "text" },
+	    { "name": "value", "type": "text" }
+	]
+    },
+	 {
+	"name": "Measure Categorical (single)",
+	"id": "measure-cata-single",
+	"group": "Input",
+	"description": "input",
+	"inputs": [],
+	"outputs": [
+	    { "name": "output", "type": "constant-text" }
+	],
+	"state": [
+	    { "name": "measure name", "type": "categorical-measures" }
+	]
+    },
+    {
+	"name": "Measure Continuous",
+	"id": "measure",
+	"group": "Input",
+	"description": "input",
+	"inputs": [],
+	"outputs": [
+	    { "name": "output", "type": "constant-text" }
+	],
+	"state": [
+	    { "name": "measure name", "type": "continuous-measures" }
+	]
+    },
+    {
+	"name": "Covariates Fixed",
+	"id": "covar-fixed",
+	"group": "Input",
+	"description": "something",
+	"inputs": [],
+	"outputs": [
+	    { "name": "output", "type": "constant-text" }
+	],
+	"state": [
+	    { "name": "covariates", "type": "all-measures" }
+	]
+    },
+    {
+	"name": "Log Transform",
+	"id": "transform-log",
+	"group": "Transforms",
+	"description": "something",
+	"inputs": [
+	    { "name": "input", "type": "constant-text" }	    
+	],
+	"outputs": [
+	    { "name": "output", "type": "constant-text" }
+	],
+	"state": [
+	    { "name": "variable", "type": "text" }	    
+	]
+    },
+    {
+	"name": "Display Scatterplot",
+	"id": "display-scatter",
+	"group": "Display",
+	"description": "something",
+	"inputs": [
+	    { "name": "input", "type": "constant-text" }
+	],
+	"outputs": [],
+	"state": []
+    },
+    {
+	"name": "Display Text",
+	"id": "display-text",
+	"group": "Display",
+	"description": "something",
+	"inputs": [
+	    { "name": "input", "type": "constant-text" }
+	],
+	"outputs": [],
+	"state": []
+    },
+    {
+	"name": "Display Line",
+	"id": "display-line",
+	"group": "Display",
+	"description": "something",
+	"inputs": [
+	    { "name": "input", "type": "constant-text" }
+	],
+	"outputs": [],
+	"state": []
+    },
+    {
+	"name": "Display Tunnel",
+	"id": "display-tunnel",
+	"group": "Display",
+	"description": "something",
+	"inputs": [
+	    { "name": "input", "type": "constant-text" }
+	],
+	"outputs": [],
+	"state": []
+    }
+]
