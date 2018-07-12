@@ -31,7 +31,7 @@ li.intext {
     font-weight: 400;
     font-style: normal;
     font-size: 21px;
-    line-height: 1.58;
+    line-height: 1.48;
     letter-spacing: -.003em;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
@@ -44,6 +44,19 @@ li.intext {
     -webkit-text-size-adjust: 100%;
     word-break: break-word;
     word-wrap: break-word;
+    column-width: 400px;
+    -webkit-column-width: 400px;
+    -moz-column-width: 400px;
+    height: 150px;
+    column-fill: auto;
+    -webkit-column-fill: auto;
+    -moz-column-fill: auto;
+    column-rule: 1px solid #CCC;
+    -webkit-column-rule: 1px solid #CCC;
+    -moz-column-rule: 1px solid #CCC;
+    column-gap: 40px;
+    -webkit-column-gap: 40px;
+    -moz-column-gap: 40px;
 }
 .tut-caption {
     text-align: center;
