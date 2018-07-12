@@ -10,7 +10,8 @@
     <!-- Le styles -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <!--  <link href="/css/bootstrap-responsive.css" rel="stylesheet"> -->
-    <link href="css/fontawesome-all.min.css" rel="stylesheet">                          
+    <!-- <link href="css/fontawesome-all.min.css" rel="stylesheet">                           -->
+    <link href="../NewDataExpo/css/fontawesome-all.min.css" rel="stylesheet">
     <!-- <link href="custom_styles.css" rel="stylesheet"> -->
     <!-- Latest compiled and minified CSS -->
     
@@ -71,6 +72,9 @@ echo('<script type="text/javascript"> user_name = "'.$user_name.'";model_name = 
           <li class="nav-item active">
             <a class="nav-link" href="/index.php">Home <span class="sr-only">(current)</span></a>
           </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="cooccurrence.php">Co-occurrence</a>
+          </li>
         </ul>
       </div>
     </nav>
@@ -79,14 +83,17 @@ echo('<script type="text/javascript"> user_name = "'.$user_name.'";model_name = 
     <div class="container-fluid" style="margin-top: 10px;">
       <div class="row">
         <div class="col-md-12">
-    <p class="tut-p">Define sets of variables that can be used in other DEAP applications. Start by searching for a measure of interest using the search field on the right. Highlight the set on the left you want to add the measure to and press the measures "+" button for that variable. If you attempt to change a set marked as "public", a copy of that set will be created. You can change entries in the copy but not in the "public" set.</p>
+    <p class="tut-p">Define sets of variables that can be used in other DEAP applications. Start by searching for a measure of interest using the search field on the right. Highlight the set on the left you want to add the measure to and press the measures "+" button next to the element name for that variable. If you attempt to change a set marked as "public", a copy of that set will be created. You can change entries in the copy but not in the "public" set. Sets can be used in the multi-dimensional embedding application available in the menu on the front-page of DEAP.</p>
         </div>
       </div>
       <div class="row">
         <div class="col-md-6">
           <div>
-            <button class="add-set" title="Add a new set">+</button>
-            <div style="color: gray; margin-left: 20px; font-weight: 200; position: relative; left: 20px; top: 25px;">There are currently <span class="num-sets"></span> sets.</div>
+            <!-- <button class="add-set" title="Add a new set">+</button> -->
+            <div style = "z-index:9; margin-top: 0px;">
+               <i class="fa fa-plus-circle add-set" style="font-size:78px;color:red;margin:10px;cursor: pointer;"><span style="font-size: 12pt;">Add a new set</span></i>
+            </div>
+            <div class="pull-left" style="color: gray; margin-top: 20px; font-weight: 200;">There are currently <span class="num-sets"></span> sets.</div>
           </div>
           <div id="cards" style="margin-left: 0px;"></div>
         </div>

@@ -1,3 +1,8 @@
+.tinytext {
+    font-size: 11px;
+    margin-top: 3px;
+    margin-left: 3px;
+}
 .col-sm-10 {
     max-width: 100%;
 }
@@ -31,7 +36,7 @@ li.intext {
     font-weight: 400;
     font-style: normal;
     font-size: 21px;
-    line-height: 1.58;
+    line-height: 1.38;
     letter-spacing: -.003em;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
@@ -44,6 +49,19 @@ li.intext {
     -webkit-text-size-adjust: 100%;
     word-break: break-word;
     word-wrap: break-word;
+    column-width: 400px;
+    -webkit-column-width: 400px;
+    -moz-column-width: 400px;
+    height: 150px;
+    column-fill: auto;
+    -webkit-column-fill: auto;
+    -moz-column-fill: auto;
+    column-rule: 1px solid #CCC;
+    -webkit-column-rule: 1px solid #CCC;
+    -moz-column-rule: 1px solid #CCC;
+    column-gap: 40px;
+    -webkit-column-gap: 40px;
+    -moz-column-gap: 40px;
 }
 .tut-caption {
     text-align: center;
@@ -166,7 +184,7 @@ font: 10px sans-serif;
         color: black;
     }
     #cards {
-	margin-top: 40px;
+	margin-top: 5px;
     }
     .card:hover {
         box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
@@ -183,11 +201,11 @@ font: 10px sans-serif;
 	border: 1px solid gray;
 	border-radius: 2px 2px 0 0;
 	display: inline-flex;
-	margin-right: 10px;
-	margin-bottom: 10px;
+	margin-right: 20px;
+	margin-bottom: 20px;
 	color: gray;
 	-webkit-font-smoothing: antialiased;
-        box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+        //box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
         transition: 0.3s;
     }
     .card-active {
@@ -197,6 +215,7 @@ font: 10px sans-serif;
     }
     .card-title {
 	padding-left: 5px;
+        margin-top: 5px;
 	font-size: 24pt;
 	border-bottom: 1px solid lightgray;
     }
@@ -248,22 +267,6 @@ label {
 }
 .item-name:before {
     content: "";
-}
-.add-set {
-    position: absolute;
-    top: 10px;
-    left: 10px;
-    border-radius: 40px;
-    width: 40px;
-    height: 40px;
-    border: 1px solid lightblue;
-    background-color: white;
-    color: black;
-}
-.add-set:hover {
-    background-color: '#e9967a';
-    color: white;
-    box-shadow: 0px 0px 5px #444;
 }
 .var-entry {
     line-height: 1.58;
