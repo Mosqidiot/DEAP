@@ -173,6 +173,12 @@ body {
   font-weight: 200;
   font-size: 14pt;
 }
+#runFilter {
+  background-color: #222222;
+  color: #808080;
+  font-weight: 200;
+  font-size: 14pt;
+}
 .selectpicker {
   //height: 32px;
   //font-weight: 200 !important;
@@ -182,4 +188,7 @@ body {
 }
 #start {
     margin-bottom: 20px;
+}
+input.inputmeasures {
+    padding-top: 10px;
 }

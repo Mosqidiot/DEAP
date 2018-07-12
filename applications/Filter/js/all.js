@@ -128,7 +128,7 @@ function highlight(where, what) {
    //jQuery(d21).addClass("span12");
    jQuery(d21).addClass("select");
    jQuery(d1).append(d21);
-   jQuery(d21).append('<div class="input-group"><input class="inputmeasures form-control" type="text" placeholder="select a predefined filter or enter your own"/><span class="input-group-addon btn" id="saveNewFilter">&nbsp;Save</span></div>');
+   jQuery(d21).append('<div class="input-group"><input class="inputmeasures form-control" type="text" placeholder="select a predefined filter or enter your own"/><span class="input-group-addon btn" id="runFilter">&nbsp;Run</span><span class="input-group-addon btn" id="saveNewFilter">&nbsp;Save</span></div>');
    jQuery(d21).append('<div id="info"></div>')
    jQuery('#saveNewFilter').click(function() {
        var z = jQuery('.inputmeasures').val();
@@ -384,7 +384,7 @@ function parse() {
     // we will apply the rules to each data entry and generate an output array
     var searchTerm = jQuery('.inputmeasures').val();
     jQuery('.loading').show();
-    jQuery.get('js/grammar_vectorized.txt?_=112', function(data) {
+    jQuery.get('js/grammar_vectorized.txt?_=113', function(data) {
         var parser;
         try {
             parser = PEG.buildParser(data);
@@ -401,7 +401,8 @@ function parse() {
             res = parser.parse(searchTerm);
         } catch(e) {
             jQuery('.loading').hide();
-            alert(e.message);
+            alert("Error: Invalid filter, please check your syntax. Detailed error message: " + e.message);
+            return false;
         }           
         for (var i = 0; i < allMeasures['src_subject_id'].length; i++) {
             var d = Array.apply(null, new Array(header.length)).map(function(){return 0;});
@@ -424,16 +425,12 @@ function parse() {
         console.log('number of yes/no: ' + yes.length + " " + no.length);
         displayData(yes, ".yes");
         displayData(no, ".no");
-        console.log("After displayData");
         
         // add Yea and Nay fields
         var yea = jQuery(document.createElement("div")).addClass("Yea");
         var nay = jQuery(document.createElement("div")).addClass("Nay");
         jQuery('.yes').append(yea);
         jQuery('.no').append(nay)
-        
-        console.log("After adding classes .yes and .no");
-        //pile(yea, nay);
         
         var SubjIDIDX = header.indexOf("src_subject_id");
         var VisitIDIDX = header.indexOf("eventname");
@@ -449,7 +446,6 @@ function parse() {
                 yesSubjects.push( yes[i][SubjIDIDX] ); 
             }
         }
-        console.log("after adding yesSubjects");
         yesSubjects = jQuery.unique(yesSubjects);
         var numYesSubjects = jQuery.unique(yesSubjects.map(function(e) { if (e.length == 2) return e[0]; else return e; })).length;
         
@@ -463,7 +459,6 @@ function parse() {
         }
         noSubjects = jQuery.unique(noSubjects); // we can have the same subject with multiple VisitIDs, but together they should be unique
         var numNoSubjects = jQuery.unique(noSubjects.map(function(e) { if (e.length == 2) return e[0]; else return e; })).length;
-        console.log("after adding noSubjects");
         
         // we should get a key for this selection (either Yea or Nay)
         // lets make the key dependent on the search string - will provide us with less files to worry about
@@ -481,7 +476,6 @@ function parse() {
             jQuery('.Nay').html("Nay: " + no.length.toLocaleString()).attr('title', no.length.toLocaleString() + ' sessions for which the filter "' + uniqueIDN + '" is false (#subjects: '+ numNoSubjects+')');
             jQuery('.Nay').draggable();
         }
-        console.log("before store this subset");
         // store this as subset
         jQuery.ajax({
             type: "POST",
@@ -617,9 +611,18 @@ jQuery(document).ready(function() {
     createBlock('#start');
     getAllFilters();
     jQuery('#dataHereTitle').hide();
-    jQuery('.inputmeasures').change(function() {
+    // don't react to change, we will get a change on loosing focus, only react to hitting the enter key
+    jQuery('.inputmeasures').on('keypress', function(e) {
+        if (e.keyCode == 13)
+            changeSearch();
+    });
+    jQuery('#runFilter').on('click', function() {
+        var text = jQuery('.inputmeasures').text();
+        if (text == "") {
+            alert("No filter selected. Start by either selecting a predefined filter from the drop-down, or by typing in a new filter.");
+            return;
+        }
         changeSearch();
     });
-    
     setTimeout(function() { addOneMeasure('age'); }, 0);
 });

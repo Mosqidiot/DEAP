@@ -1,0 +1,310 @@
+{
+    // same as before but this time we will vectorize the response to all requests
+    // we assume that all the data is in allMeasures[term][1..N]
+    
+    // return the entry in the table that corresponds to this variable
+    window.cacheFindIndex = {};
+    function findIndex( what ) {
+        var w = what;
+        if (typeof cacheFindIndex[w] !== 'undefined') {
+            return cacheFindIndex[w];
+        }
+        var idxHeader = header.indexOf(w);
+        if (idxHeader > -1) {
+            cacheFindIndex[w] = idxHeader;
+            return idxHeader;
+        }
+        return false;
+    }
+    
+    if (typeof(window.cacheNumVisits) == 'undefined')
+        window.cacheNumVisits = {};
+    
+    // return what number visit this is (return string), counting starts with 0
+    // if a variable is supplied count which visit this is that has this variable
+    function visitOrder( variable ) {
+        return -1; // did not work
+    }
+    
+    
+    // if a variable is supplied count how many visits have this variable for the current subject
+    function numVisits( variable ) {
+        return 0;
+    }
+
+    function vectorize( left, right, func ) {
+        // vectorize the equal sign
+        var isVecL = (left.constructor === Array);
+        var isVecR = (right.constructor === Array);
+        if (isVecL && isVecR) {
+            var res = Array.apply(null, new Array(left.length)).map(function(){return false});
+            for (var i = 0; i < left.length; i++) {
+                if (func(left[i], right[i]))
+                    res[i] = true;
+            }
+            return res;
+        } else if (!isVecL && !isVecR) {
+            return func(left, right);
+        } else {
+            // one of them is a vector, the other a scalar
+            if (isVecL) {
+                var res = Array.apply(null, new Array(left.length)).map(function(){return false});
+                for (var i = 0; i < left.length; i++) {
+                    if (func(left[i], right))
+                        res[i] = true;
+                }
+                return res;             
+            } else {
+                var res = Array.apply(null, new Array(right.length)).map(function(){return false});
+                for (var i = 0; i < right.length; i++) {
+                    if (func(left,right[i]))
+                        res[i] = true;
+                }
+                return res;
+            }
+        }
+    }
+    function vectorizeOne( one, func ) {
+        var isOne = (one.constructor === Array);
+        if (isOne) {
+            var res = Array.apply(null, new Array(one.length)).map(function(){return false});
+            for (var i = 0; i < one.length; i++) {
+                res[i] = func(one[i]);
+            }
+            return res;
+        }
+        return func(one);
+    }
+}
+
+
+
+start
+  = equal
+
+equal
+    = left:or __ "==" __ right:equal {
+        // vectorize the equal sign
+        return vectorize(left, right, function(a,b) { return a === b; });
+    }
+    / left:or __ "=" __ right:equal {
+        return vectorize(left, right, function(a,b) { return a === b; });
+    }
+    / or
+
+or
+    = left:primary __ "or" __ right:or {
+        return vectorize(left, right, function(a,b) { return a || b; });
+    }
+    / left:primary __ "and" __ right:equal {
+        return vectorize(left, right, function(a,b) { return a && b; });
+    }
+    / left:primary __ "<>" __ right:nequal {
+        return vectorize(left, right, function(a,b) { return a !== b; });
+    }
+    / left:primary __ "==" __ right:primary {
+        return vectorize(left, right, function(a,b) { return a === b; });
+    }
+    / left:primary __ "=" __ right:primary {
+        return vectorize(left, right, function(a,b) { return a === b; });
+    }
+    / left:primary __ "+" __ right:primary {
+        return vectorize(left, right, function(a,b) { return a + b; });
+    }
+    / left:primary __ "-" __ right:primary {
+        return vectorize(left, right, function(a,b) { return a - b; });
+    }
+    / left:primary __ "*" __ right:primary {
+        return vectorize(left, right, function(a,b) { return a * b; });
+    }
+    / left:primary __ "/" __ right:primary {
+        return vectorize(left, right, function(a,b) { return a / b; });
+    }
+    / left:primary __ ">=" __ right:primary {
+        return vectorize(left, right, function(a,b) { return a >= b; });
+    }
+    / left:primary __ "<=" __ right:primary {
+        return vectorize(left, right, function(a,b) { return a <= b; });
+    }
+    / left:primary __ ">" __ right:primary {
+        return vectorize(left, right, function(a,b) { return a > b; });
+    }
+    / left:primary __ "<" __ right:primary {
+        return vectorize(left, right, function(a,b) { return a < b; });
+    }
+    / primary
+
+and
+    = left:primary __ "and" __ right:or {
+        return vectorize(left, right, function(a,b) { return a && b; });
+    }
+    / primary
+
+nequal
+    = left:primary __ "<>" __ right:nequal {
+        return vectorize(left, right, function(a,b) { return a !== b; });
+    }
+    / primary
+
+primary
+  = number
+    / "not" __ "(" __ equal:equal __ ")" {
+        return vectorizeOne(equal, function(a) { return !a; });
+    }
+    / "has" __ "(" __ variable:variable __ ")" {
+        if ((typeof variable === "undefined") || (variable === "") || (variable === "NA"))
+           return false;
+        return vectorizeOne(variable, function(a) { if (a === "" || a === "NA") return false; return true; });
+    }
+    / "quantile" __ "(" __ variable:variable __ "," __ number:number __ ")" {
+        if ((typeof variable === "undefined") || (variable === "") || (variable === "NA") || (variable === null))
+           return false;
+        // calculate the quantile for this "number"
+        if (number < 0 || number > 1) {
+           alert("Error: quantile not in 0..1 range but " + number);
+        }
+        var threshold = 0;
+        var sum = 0;
+        var cop = variable;
+        cop = cop.map(function(a) { return +a; }); // convert to a number
+        cop.sort(); // sort by size
+        for (var i = 0; i < cop.length; i++) {
+            if (isFinite(cop[i])) {
+              sum = sum + cop[i];
+            }
+        }
+        var sum2 = 0;
+        for (var i = 0; i < cop.length; i++) {
+            if (isFinite(cop[i])) {
+              sum2 = sum2 + cop[i];
+            } 
+            if ( sum2 >= (sum * number) ) {
+                 threshold = cop[i];
+                 break;
+            }  
+        }
+        return threshold;
+    }    
+    / "visit" __ "(" __ ")" {
+        return visitOrder();
+    }
+    / "numVisits" __ "(" __ ")" {
+        return numVisits();
+    }
+    / "visit" __ "(" __ name:measure __ ")" {
+        return visitOrder( name );
+    }
+    / "numVisits" __ "(" __ name:measure __ ")" {
+        return numVisits( name );
+    }
+    / "(" __ equal:equal __ ")" {
+        return equal;
+    }
+    / variable
+
+number
+  = int_:int frac:frac exp:exp __ { return parseFloat(int_ + frac + exp); }
+  / int_:int frac:frac __ { return parseFloat(int_ + frac); }
+  / int_:int exp:exp __ { return parseFloat(int_ + exp); }
+  / int_:int __ { return parseFloat(int_); }
+
+int
+  = digit19:digit19 digits:digits { return digit19 + digits; }
+  / digit:digit
+  / op:("-" / "+" ) digit19:digit19 digits:digits { return "-" + digit19 + digits; }
+  / op:("-" / "+" ) digit:digit { return "-" + digit; }
+
+frac
+  = "." digits:digits { return "." + digits; }
+
+exp
+  = e:e digits:digits { return e + digits; }
+
+digits
+  = digits:digit+ { return digits.join(""); }
+
+digit = [0-9]
+digit19 = [1-9]
+
+e
+  = e:[eE] sign:[+-]? { return e + sign; }
+
+
+variable "variable"
+  = meas:( ('"' double_char* '"')
+  /        ("'" single_char* "'") ) {
+        var idx = 0;
+        var varname = "";
+        if (meas.length != 3) {
+           idx = findIndex(meas.join(""));
+           varname = meas.join("");
+        } else {
+           idx = findIndex(meas[1].join(""));
+           varname = meas[1].join("");
+        }
+        if (idx == false) { // return the value itself if we cannot find this as a variable
+           if (meas.length != 3) {
+              return meas.join("");
+           }
+           return meas[1].join("");
+        }
+        return allMeasures[varname];
+    }
+  /  mea:( ('\$' [A-Za-z0-9\._]+) ) {
+        var idx = findIndex(mea[1].join(""));
+        var varname = mea[1].join("");
+        if (idx == false) { // return the value itself, same as above but with dollar sign
+           return mea[1].join("");
+        }
+        return allMeasures[varname];
+  }
+  /  mea:( ( [A-Za-z] [A-Za-z0-9\._]+ ) ) {
+        var idx = findIndex(mea[0] + mea[1].join(""));
+        var varname = mea[0] + mea[1].join("");
+        if (header.indexOf(varname) == -1) {
+           return "";
+        }
+        return allMeasures[varname];
+  }
+
+
+measure "measure"
+  = meas:( ('"' double_char* '"')
+  /        ("'" single_char* "'") ) {
+        return meas[1].join(""); // just the variable name
+    }
+  /  mea:( ('\$' [A-Za-z0-9\._]+) ) {
+        return mea[1].join("");
+  }
+  /  mea:( ( [A-Za-z] [A-Za-z0-9\._]+) ) {
+        return mea[0] + mea[1].join("");
+  }
+
+single_char
+  = [^'\\\0\x1F\x7f]
+  / escape_char
+
+double_char
+  = [^"\\\0\x1F\x7f]
+  / escape_char
+
+space_separated_char
+  = [^ \\\0-\x1F\x7f\>\<\(\)\+\-]
+  / escape_char
+
+escape_char
+  = "\\'" { return "'"; }
+  / '\\"' { return '"'; }
+  / "\\\\" { return "\\"; }
+  / "\\/" { return "/"; }
+  / "\\b" { return "\b"; }
+  / "\\f" { return "\f"; }
+  / "\\n" { return "\n"; }
+  / "\\r" { return "\r"; }
+  / "\\t" { return "\t"; }
+
+__ =
+  whitespace*
+
+whitespace =
+  [ \t\n\r]
