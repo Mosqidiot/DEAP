@@ -1,0 +1,1274 @@
+Loading required package: Matrix
+Loading required package: lme4
+Loading required package: mgcv
+Loading required package: nlme
+
+Attaching package: ‘nlme’
+
+The following object is masked from ‘package:lme4’:
+
+    lmList
+
+This is mgcv 1.8-19. For overview type 'help("mgcv-package")'.
+This is gamm4 0.2-5
+
+
+Please cite as: 
+
+ Hlavac, Marek (2015). stargazer: Well-Formatted Regression and Summary Statistics Tables.
+ R package version 5.2. http://CRAN.R-project.org/package=stargazer 
+
+Loading required package: lattice
+Loading required package: ggplot2
+Need help getting started? Try the cookbook for R:
+http://www.cookbook-r.com/Graphs/
+To take full advantage of multiple cores, use:
+  mxOption(NULL, 'Number of Threads', parallel::detectCores()) #now
+  Sys.setenv(OMP_NUM_THREADS=parallel::detectCores()) #before library(OpenMx)
+
+Attaching package: ‘OpenMx’
+
+The following objects are masked from ‘package:Matrix’:
+
+    %&%, expm
+
+Error in inputs[["cov.fixed"]][[which(unlist(inputs[["cov.fixed"]]) ==  : 
+  attempt to select less than one element
+In addition: There were 15 warnings (use warnings() to see them)
+Error in inputs[["cov.fixed"]][[which(unlist(inputs[["cov.fixed"]]) ==  : 
+  attempt to select less than one element
+In addition: There were 15 warnings (use warnings() to see them)
+Error in inputs[["cov.fixed"]][[which(unlist(inputs[["cov.fixed"]]) ==  : 
+  attempt to select less than one element
+In addition: There were 15 warnings (use warnings() to see them)
+Error in inputs[["cov.fixed"]][[which(unlist(inputs[["cov.fixed"]]) ==  : 
+  attempt to select less than one element
+In addition: There were 15 warnings (use warnings() to see them)
+Error in inputs[["cov.fixed"]][[which(unlist(inputs[["cov.fixed"]]) ==  : 
+  attempt to select less than one element
+In addition: There were 15 warnings (use warnings() to see them)
+Error in inputs[["cov.fixed"]][[which(unlist(inputs[["cov.fixed"]]) ==  : 
+  attempt to select less than one element
+In addition: There were 15 warnings (use warnings() to see them)
+Error in inputs[["cov.fixed"]][[which(unlist(inputs[["cov.fixed"]]) ==  : 
+  attempt to select less than one element
+In addition: There were 15 warnings (use warnings() to see them)
+Error in inputs[["cov.fixed"]][[which(unlist(inputs[["cov.fixed"]]) ==  : 
+  attempt to select less than one element
+In addition: There were 15 warnings (use warnings() to see them)
+Error in inputs[["cov.fixed"]][[which(unlist(inputs[["cov.fixed"]]) ==  : 
+  attempt to select less than one element
+In addition: There were 15 warnings (use warnings() to see them)
+Error in inputs[["cov.fixed"]][[which(unlist(inputs[["cov.fixed"]]) ==  : 
+  attempt to select less than one element
+In addition: There were 15 warnings (use warnings() to see them)
+Error in inputs[["cov.fixed"]][[which(unlist(inputs[["cov.fixed"]]) ==  : 
+  attempt to select less than one element
+In addition: There were 15 warnings (use warnings() to see them)
+Error in inputs[["cov.fixed"]][[which(unlist(inputs[["cov.fixed"]]) ==  : 
+  attempt to select less than one element
+In addition: There were 15 warnings (use warnings() to see them)
+Error in inputs[["cov.fixed"]][[which(unlist(inputs[["cov.fixed"]]) ==  : 
+  attempt to select less than one element
+In addition: There were 15 warnings (use warnings() to see them)
+Error in inputs[["cov.fixed"]][[which(unlist(inputs[["cov.fixed"]]) ==  : 
+  attempt to select less than one element
+In addition: There were 15 warnings (use warnings() to see them)
+Error in inputs[["cov.fixed"]][[which(unlist(inputs[["cov.fixed"]]) ==  : 
+  attempt to select less than one element
+In addition: There were 15 warnings (use warnings() to see them)
+Error in inputs[["cov.fixed"]][[which(unlist(inputs[["cov.fixed"]]) ==  : 
+  attempt to select less than one element
+In addition: There were 15 warnings (use warnings() to see them)
+Error in inputs[["cov.fixed"]][[which(unlist(inputs[["cov.fixed"]]) ==  : 
+  attempt to select less than one element
+In addition: There were 15 warnings (use warnings() to see them)
+Error in inputs[["cov.fixed"]][[which(unlist(inputs[["cov.fixed"]]) ==  : 
+  attempt to select less than one element
+In addition: There were 15 warnings (use warnings() to see them)
+Error in inputs[["cov.fixed"]][[which(unlist(inputs[["cov.fixed"]]) ==  : 
+  attempt to select less than one element
+In addition: There were 15 warnings (use warnings() to see them)
+Error in inputs[["cov.fixed"]][[which(unlist(inputs[["cov.fixed"]]) ==  : 
+  attempt to select less than one element
+In addition: There were 15 warnings (use warnings() to see them)
+Error in inputs[["cov.fixed"]][[which(unlist(inputs[["cov.fixed"]]) ==  : 
+  attempt to select less than one element
+In addition: There were 15 warnings (use warnings() to see them)
+Error in inputs[["cov.fixed"]][[which(unlist(inputs[["cov.fixed"]]) ==  : 
+  attempt to select less than one element
+In addition: There were 15 warnings (use warnings() to see them)
+Error in inputs[["cov.fixed"]][[which(unlist(inputs[["cov.fixed"]]) ==  : 
+  attempt to select less than one element
+In addition: There were 15 warnings (use warnings() to see them)
+Error in inputs[["cov.fixed"]][[which(unlist(inputs[["cov.fixed"]]) ==  : 
+  attempt to select less than one element
+In addition: There were 15 warnings (use warnings() to see them)
+Error in inputs[["cov.fixed"]][[which(unlist(inputs[["cov.fixed"]]) ==  : 
+  attempt to select less than one element
+In addition: There were 15 warnings (use warnings() to see them)
+Error in inputs[["cov.fixed"]][[which(unlist(inputs[["cov.fixed"]]) ==  : 
+  attempt to select less than one element
+In addition: There were 15 warnings (use warnings() to see them)
+Error in inputs[["cov.fixed"]][[which(unlist(inputs[["cov.fixed"]]) ==  : 
+  attempt to select less than one element
+In addition: There were 15 warnings (use warnings() to see them)
+Error in inputs[["cov.fixed"]][[which(unlist(inputs[["cov.fixed"]]) ==  : 
+  attempt to select less than one element
+In addition: There were 15 warnings (use warnings() to see them)
+Error in inputs[["cov.fixed"]][[which(unlist(inputs[["cov.fixed"]]) ==  : 
+  attempt to select less than one element
+In addition: Error in inputs[["cov.fixed"]][[which(unlist(inputs[["cov.fixed"]]) ==  : 
+  attempt to select less than one element
+There were 15 warnings (use warnings() to see them)
+In addition: There were 15 warnings (use warnings() to see them)
+Error in inputs[["cov.fixed"]][[which(unlist(inputs[["cov.fixed"]]) ==  : 
+  attempt to select less than one element
+In addition: There were 15 warnings (use warnings() to see them)
+Error in inputs[["cov.fixed"]][[which(unlist(inputs[["cov.fixed"]]) ==  : 
+  attempt to select less than one element
+In addition: There were 15 warnings (use warnings() to see them)
+Error in inputs[["cov.fixed"]][[which(unlist(inputs[["cov.fixed"]]) ==  : 
+  attempt to select less than one element
+In addition: There were 15 warnings (use warnings() to see them)
+Error in inputs[["cov.fixed"]][[which(unlist(inputs[["cov.fixed"]]) ==  : 
+  attempt to select less than one element
+In addition: There were 15 warnings (use warnings() to see them)
+Error in inputs[["cov.fixed"]][[which(unlist(inputs[["cov.fixed"]]) ==  : 
+  attempt to select less than one element
+In addition: There were 15 warnings (use warnings() to see them)
+Error in inputs[["cov.fixed"]][[which(unlist(inputs[["cov.fixed"]]) ==  : 
+  attempt to select less than one element
+In addition: There were 15 warnings (use warnings() to see them)
+Error in inputs[["cov.fixed"]][[which(unlist(inputs[["cov.fixed"]]) ==  : 
+  attempt to select less than one element
+In addition: There were 15 warnings (use warnings() to see them)
+Error in inputs[["cov.fixed"]][[which(unlist(inputs[["cov.fixed"]]) ==  : 
+  attempt to select less than one element
+In addition: There were 15 warnings (use warnings() to see them)
+Error in inputs[["cov.fixed"]][[which(unlist(inputs[["cov.fixed"]]) ==  : 
+  attempt to select less than one element
+In addition: There were 15 warnings (use warnings() to see them)
+Error in inputs[["cov.fixed"]][[which(unlist(inputs[["cov.fixed"]]) ==  : 
+  attempt to select less than one element
+In addition: There were 15 warnings (use warnings() to see them)
+Error in inputs[["cov.fixed"]][[which(unlist(inputs[["cov.fixed"]]) ==  : 
+  attempt to select less than one element
+In addition: There were 15 warnings (use warnings() to see them)
+Error in if (independendVar %in% substring(smoothVar, 3, nchar(smoothVar) -  : 
+  argument is of length zero
+In addition: There were 15 warnings (use warnings() to see them)
+Error in inputs[["cov.fixed"]][[which(unlist(inputs[["cov.fixed"]]) ==  : 
+  attempt to select less than one element
+In addition: There were 15 warnings (use warnings() to see them)
+Error in inputs[["cov.fixed"]][[which(unlist(inputs[["cov.fixed"]]) ==  : 
+  attempt to select less than one element
+In addition: There were 15 warnings (use warnings() to see them)
+Error in inputs[["cov.fixed"]][[which(unlist(inputs[["cov.fixed"]]) ==  : 
+  attempt to select less than one element
+In addition: There were 15 warnings (use warnings() to see them)
+Error in inputs[["cov.fixed"]][[which(unlist(inputs[["cov.fixed"]]) ==  : 
+  attempt to select less than one element
+In addition: There were 15 warnings (use warnings() to see them)
+Error in inputs[["cov.fixed"]][[which(unlist(inputs[["cov.fixed"]]) ==  : 
+  attempt to select less than one element
+In addition: There were 15 warnings (use warnings() to see them)
+Error in inputs[["cov.fixed"]][[which(unlist(inputs[["cov.fixed"]]) ==  : 
+  attempt to select less than one element
+In addition: There were 15 warnings (use warnings() to see them)
+Error in inputs[["cov.fixed"]][[which(unlist(inputs[["cov.fixed"]]) ==  : 
+  attempt to select less than one element
+In addition: There were 15 warnings (use warnings() to see them)
+Error in inputs[["cov.fixed"]][[which(unlist(inputs[["cov.fixed"]]) ==  : 
+  attempt to select less than one element
+In addition: There were 15 warnings (use warnings() to see them)
+Error in if (independendVar %in% substring(smoothVar, 3, nchar(smoothVar) -  : 
+  argument is of length zero
+In addition: There were 15 warnings (use warnings() to see them)
+Error in inputs[["cov.fixed"]][[which(unlist(inputs[["cov.fixed"]]) ==  : 
+  attempt to select less than one element
+In addition: There were 15 warnings (use warnings() to see them)
+Error in inputs[["cov.fixed"]][[which(unlist(inputs[["cov.fixed"]]) ==  : 
+  attempt to select less than one element
+In addition: There were 15 warnings (use warnings() to see them)
+Error in inputs[["cov.fixed"]][[which(unlist(inputs[["cov.fixed"]]) ==  : 
+  attempt to select less than one element
+In addition: There were 15 warnings (use warnings() to see them)
+Error in inputs[["cov.fixed"]][[which(unlist(inputs[["cov.fixed"]]) ==  : 
+  attempt to select less than one element
+In addition: There were 15 warnings (use warnings() to see them)
+Error in inputs[["cov.fixed"]][[which(unlist(inputs[["cov.fixed"]]) ==  : 
+  attempt to select less than one element
+In addition: There were 15 warnings (use warnings() to see them)
+Error in inputs[["cov.fixed"]][[which(unlist(inputs[["cov.fixed"]]) ==  : 
+  attempt to select less than one element
+In addition: There were 15 warnings (use warnings() to see them)
+Error in inputs[["cov.fixed"]][[which(unlist(inputs[["cov.fixed"]]) ==  : 
+  attempt to select less than one element
+In addition: There were 15 warnings (use warnings() to see them)
+Error in `[[<-.data.frame`(`*tmp*`, independendVar, value = character(0)) : 
+  replacement has 0 rows, data has 4524
+In addition: There were 15 warnings (use warnings() to see them)
+Error in inputs[["cov.fixed"]][[which(unlist(inputs[["cov.fixed"]]) ==  : 
+  attempt to select less than one element
+In addition: There were 15 warnings (use warnings() to see them)
+Error in inputs[["cov.fixed"]][[which(unlist(inputs[["cov.fixed"]]) ==  : 
+  attempt to select less than one element
+In addition: There were 15 warnings (use warnings() to see them)
+Error in inputs[["cov.fixed"]][[which(unlist(inputs[["cov.fixed"]]) ==  : 
+  attempt to select less than one element
+In addition: There were 15 warnings (use warnings() to see them)
+Error in inputs[["cov.fixed"]][[which(unlist(inputs[["cov.fixed"]]) ==  : 
+  attempt to select less than one element
+In addition: There were 15 warnings (use warnings() to see them)
+Error in inputs[["cov.fixed"]][[which(unlist(inputs[["cov.fixed"]]) ==  : 
+  attempt to select less than one element
+In addition: There were 15 warnings (use warnings() to see them)
+Error in inputs[["cov.fixed"]][[which(unlist(inputs[["cov.fixed"]]) ==  : 
+  attempt to select less than one element
+In addition: There were 15 warnings (use warnings() to see them)
+Error in inputs[["cov.fixed"]][[which(unlist(inputs[["cov.fixed"]]) ==  : 
+  attempt to select less than one element
+In addition: There were 15 warnings (use warnings() to see them)
+Error in inputs[["cov.fixed"]][[which(unlist(inputs[["cov.fixed"]]) ==  : 
+  attempt to select less than one element
+In addition: There were 15 warnings (use warnings() to see them)
+fixed-effect model matrix is rank deficient so dropping 1 column / coefficient
+Error in qqnorm.default(res, pch = 19, cex = 0.3) : 
+  y is empty or has only NAs
+In addition: There were 15 warnings (use warnings() to see them)
+Error in inputs[["cov.fixed"]][[which(unlist(inputs[["cov.fixed"]]) ==  : 
+  attempt to select less than one element
+In addition: There were 15 warnings (use warnings() to see them)
+Error in inputs[["cov.fixed"]][[which(unlist(inputs[["cov.fixed"]]) ==  : 
+  attempt to select less than one element
+In addition: There were 15 warnings (use warnings() to see them)
+Error in inputs[["cov.fixed"]][[which(unlist(inputs[["cov.fixed"]]) ==  : 
+  attempt to select less than one element
+In addition: There were 15 warnings (use warnings() to see them)
+Error in inputs[["cov.fixed"]][[which(unlist(inputs[["cov.fixed"]]) ==  : 
+  attempt to select less than one element
+In addition: There were 15 warnings (use warnings() to see them)
+Error in inputs[["cov.fixed"]][[which(unlist(inputs[["cov.fixed"]]) ==  : 
+  attempt to select less than one element
+In addition: There were 15 warnings (use warnings() to see them)
+Error in inputs[["cov.fixed"]][[which(unlist(inputs[["cov.fixed"]]) ==  : 
+  attempt to select less than one element
+In addition: There were 15 warnings (use warnings() to see them)
+Error in inputs[["cov.fixed"]][[which(unlist(inputs[["cov.fixed"]]) ==  : 
+  attempt to select less than one element
+In addition: There were 15 warnings (use warnings() to see them)
+Error in inputs[["cov.fixed"]][[which(unlist(inputs[["cov.fixed"]]) ==  : 
+  attempt to select less than one element
+In addition: There were 15 warnings (use warnings() to see them)
+Error in inputs[["cov.fixed"]][[which(unlist(inputs[["cov.fixed"]]) ==  : 
+  attempt to select less than one element
+In addition: There were 15 warnings (use warnings() to see them)
+Error in inputs[["cov.fixed"]][[which(unlist(inputs[["cov.fixed"]]) ==  : 
+  attempt to select less than one element
+In addition: There were 15 warnings (use warnings() to see them)
+Error in inputs[["cov.fixed"]][[which(unlist(inputs[["cov.fixed"]]) ==  : 
+  attempt to select less than one element
+In addition: There were 15 warnings (use warnings() to see them)
+Error in inputs[["cov.fixed"]][[which(unlist(inputs[["cov.fixed"]]) ==  : 
+  attempt to select less than one element
+In addition: There were 15 warnings (use warnings() to see them)
+Error: could not find function "targazer"
+In addition: There were 15 warnings (use warnings() to see them)
+Error in inputs[["cov.fixed"]][[which(unlist(inputs[["cov.fixed"]]) ==  : 
+  attempt to select less than one element
+In addition: There were 15 warnings (use warnings() to see them)
+Error in inputs[["cov.fixed"]][[which(unlist(inputs[["cov.fixed"]]) ==  : 
+  attempt to select less than one element
+In addition: There were 15 warnings (use warnings() to see them)
+Error in inputs[["cov.fixed"]][[which(unlist(inputs[["cov.fixed"]]) ==  : 
+  attempt to select less than one element
+In addition: There were 15 warnings (use warnings() to see them)
+Error in inputs[["cov.fixed"]][[which(unlist(inputs[["cov.fixed"]]) ==  : 
+  attempt to select less than one element
+In addition: There were 15 warnings (use warnings() to see them)
+Error in inputs[["cov.fixed"]][[which(unlist(inputs[["cov.fixed"]]) ==  : 
+  attempt to select less than one element
+In addition: There were 15 warnings (use warnings() to see them)
+Error in inputs[["cov.fixed"]][[which(unlist(inputs[["cov.fixed"]]) ==  : 
+  attempt to select less than one element
+In addition: There were 15 warnings (use warnings() to see them)
+Error in inputs[["cov.fixed"]][[which(unlist(inputs[["cov.fixed"]]) ==  : 
+  attempt to select less than one element
+In addition: There were 15 warnings (use warnings() to see them)
+Error in inputs[["cov.fixed"]][[which(unlist(inputs[["cov.fixed"]]) ==  : 
+  attempt to select less than one element
+In addition: There were 15 warnings (use warnings() to see them)
+Error in .summary.object$r.squared : 
+  $ operator is invalid for atomic vectors
+In addition: There were 15 warnings (use warnings() to see them)
+Error in inputs[["cov.fixed"]][[which(unlist(inputs[["cov.fixed"]]) ==  : 
+  attempt to select less than one element
+In addition: There were 15 warnings (use warnings() to see them)
+Error in inputs[["cov.fixed"]][[which(unlist(inputs[["cov.fixed"]]) ==  : 
+  attempt to select less than one element
+In addition: There were 15 warnings (use warnings() to see them)
+Error in inputs[["cov.fixed"]][[which(unlist(inputs[["cov.fixed"]]) ==  : 
+  attempt to select less than one element
+In addition: There were 15 warnings (use warnings() to see them)
+Error in inputs[["cov.fixed"]][[which(unlist(inputs[["cov.fixed"]]) ==  : 
+  attempt to select less than one element
+In addition: There were 15 warnings (use warnings() to see them)
+Error in inputs[["cov.fixed"]][[which(unlist(inputs[["cov.fixed"]]) ==  : 
+  attempt to select less than one element
+In addition: There were 15 warnings (use warnings() to see them)
+Error in inputs[["cov.fixed"]][[which(unlist(inputs[["cov.fixed"]]) ==  : 
+  attempt to select less than one element
+In addition: There were 15 warnings (use warnings() to see them)
+Error in inputs[["cov.fixed"]][[which(unlist(inputs[["cov.fixed"]]) ==  : 
+  attempt to select less than one element
+In addition: There were 15 warnings (use warnings() to see them)
+Error in inputs[["cov.fixed"]][[which(unlist(inputs[["cov.fixed"]]) ==  : 
+  attempt to select less than one element
+In addition: There were 15 warnings (use warnings() to see them)
+Error in toJSON(statistics) : unable to convert R type 6 to JSON
+In addition: There were 15 warnings (use warnings() to see them)
+Error in inputs[["cov.fixed"]][[which(unlist(inputs[["cov.fixed"]]) ==  : 
+  attempt to select less than one element
+In addition: There were 15 warnings (use warnings() to see them)
+Error in inputs[["cov.fixed"]][[which(unlist(inputs[["cov.fixed"]]) ==  : 
+  attempt to select less than one element
+In addition: There were 15 warnings (use warnings() to see them)
+Error in inputs[["cov.fixed"]][[which(unlist(inputs[["cov.fixed"]]) ==  : 
+  attempt to select less than one element
+In addition: There were 15 warnings (use warnings() to see them)
+Error in inputs[["cov.fixed"]][[which(unlist(inputs[["cov.fixed"]]) ==  : 
+  attempt to select less than one element
+In addition: There were 15 warnings (use warnings() to see them)
+Error in toJSON(statistics) : unable to convert R type 6 to JSON
+In addition: There were 15 warnings (use warnings() to see them)
+Error in inputs[["cov.fixed"]][[which(unlist(inputs[["cov.fixed"]]) ==  : 
+  attempt to select less than one element
+In addition: There were 15 warnings (use warnings() to see them)
+Error in inputs[["cov.fixed"]][[which(unlist(inputs[["cov.fixed"]]) ==  : 
+  attempt to select less than one element
+In addition: There were 15 warnings (use warnings() to see them)
+Error in inputs[["cov.fixed"]][[which(unlist(inputs[["cov.fixed"]]) ==  : 
+  attempt to select less than one element
+In addition: There were 15 warnings (use warnings() to see them)
+Error in inputs[["cov.fixed"]][[which(unlist(inputs[["cov.fixed"]]) ==  : 
+  attempt to select less than one element
+In addition: There were 15 warnings (use warnings() to see them)
+Error in inputs[["cov.fixed"]][[which(unlist(inputs[["cov.fixed"]]) ==  : 
+  attempt to select less than one element
+In addition: There were 15 warnings (use warnings() to see them)
+Error in inputs[["cov.fixed"]][[which(unlist(inputs[["cov.fixed"]]) ==  : 
+  attempt to select less than one element
+In addition: There were 15 warnings (use warnings() to see them)
+Error in inputs[["cov.fixed"]][[which(unlist(inputs[["cov.fixed"]]) ==  : 
+  attempt to select less than one element
+In addition: There were 15 warnings (use warnings() to see them)
+Error in inputs[["cov.fixed"]][[which(unlist(inputs[["cov.fixed"]]) ==  : 
+  attempt to select less than one element
+In addition: There were 15 warnings (use warnings() to see them)
+Error in inputs[["cov.fixed"]][[which(unlist(inputs[["cov.fixed"]]) ==  : 
+  attempt to select less than one element
+In addition: There were 15 warnings (use warnings() to see them)
+Error in inputs[["cov.fixed"]][[which(unlist(inputs[["cov.fixed"]]) ==  : 
+  attempt to select less than one element
+In addition: There were 15 warnings (use warnings() to see them)
+Error in inputs[["cov.fixed"]][[which(unlist(inputs[["cov.fixed"]]) ==  : 
+  attempt to select less than one element
+In addition: There were 15 warnings (use warnings() to see them)
+Error in inputs[["cov.fixed"]][[which(unlist(inputs[["cov.fixed"]]) ==  : 
+  attempt to select less than one element
+In addition: There were 15 warnings (use warnings() to see them)
+Error in inputs[["cov.fixed"]][[which(unlist(inputs[["cov.fixed"]]) ==  : 
+  attempt to select less than one element
+In addition: There were 15 warnings (use warnings() to see them)
+Error in inputs[["cov.fixed"]][[which(unlist(inputs[["cov.fixed"]]) ==  : 
+  attempt to select less than one element
+In addition: There were 15 warnings (use warnings() to see them)
+Error in inputs[["cov.fixed"]][[which(unlist(inputs[["cov.fixed"]]) ==  : 
+  attempt to select less than one element
+In addition: There were 15 warnings (use warnings() to see them)
+Error in inputs[["cov.fixed"]][[which(unlist(inputs[["cov.fixed"]]) ==  : 
+  attempt to select less than one element
+In addition: There were 15 warnings (use warnings() to see them)
+Error in inputs[["cov.fixed"]][[which(unlist(inputs[["cov.fixed"]]) ==  : 
+  attempt to select less than one element
+In addition: There were 15 warnings (use warnings() to see them)
+Error in inputs[["cov.fixed"]][[which(unlist(inputs[["cov.fixed"]]) ==  : 
+  attempt to select less than one element
+In addition: There were 15 warnings (use warnings() to see them)
+Error in inputs[["cov.fixed"]][[which(unlist(inputs[["cov.fixed"]]) ==  : 
+  attempt to select less than one element
+In addition: There were 15 warnings (use warnings() to see them)
+Error in inputs[["cov.fixed"]][[which(unlist(inputs[["cov.fixed"]]) ==  : 
+  attempt to select less than one element
+In addition: There were 15 warnings (use warnings() to see them)
+Error in inputs[["cov.fixed"]][[which(unlist(inputs[["cov.fixed"]]) ==  : 
+  attempt to select less than one element
+In addition: There were 15 warnings (use warnings() to see them)
+Error in inputs[["cov.fixed"]][[which(unlist(inputs[["cov.fixed"]]) ==  : 
+  attempt to select less than one element
+In addition: There were 15 warnings (use warnings() to see them)
+Error in inputs[["cov.fixed"]][[which(unlist(inputs[["cov.fixed"]]) ==  : 
+  attempt to select less than one element
+In addition: There were 15 warnings (use warnings() to see them)
+Error in inputs[["cov.fixed"]][[which(unlist(inputs[["cov.fixed"]]) ==  : 
+  attempt to select less than one element
+In addition: There were 15 warnings (use warnings() to see them)
+Error in inputs[["cov.fixed"]][[which(unlist(inputs[["cov.fixed"]]) ==  : 
+  attempt to select less than one element
+In addition: There were 15 warnings (use warnings() to see them)
+Error in inputs[["cov.fixed"]][[which(unlist(inputs[["cov.fixed"]]) ==  : 
+  attempt to select less than one element
+In addition: There were 15 warnings (use warnings() to see them)
+Error in inputs[["cov.fixed"]][[which(unlist(inputs[["cov.fixed"]]) ==  : 
+  attempt to select less than one element
+In addition: There were 15 warnings (use warnings() to see them)
+Error in inputs[["cov.fixed"]][[which(unlist(inputs[["cov.fixed"]]) ==  : 
+  attempt to select less than one element
+In addition: There were 15 warnings (use warnings() to see them)
+Error in inputs[["cov.fixed"]][[which(unlist(inputs[["cov.fixed"]]) ==  : 
+  attempt to select less than one element
+In addition: There were 15 warnings (use warnings() to see them)
+Error in inputs[["cov.fixed"]][[which(unlist(inputs[["cov.fixed"]]) ==  : 
+  attempt to select less than one element
+In addition: There were 15 warnings (use warnings() to see them)
+Error in inputs[["cov.fixed"]][[which(unlist(inputs[["cov.fixed"]]) ==  : 
+  attempt to select less than one element
+In addition: There were 15 warnings (use warnings() to see them)
+Error in inputs[["cov.fixed"]][[which(unlist(inputs[["cov.fixed"]]) ==  : 
+  attempt to select less than one element
+In addition: There were 15 warnings (use warnings() to see them)
+Error in inputs[["cov.fixed"]][[which(unlist(inputs[["cov.fixed"]]) ==  : 
+  attempt to select less than one element
+In addition: There were 15 warnings (use warnings() to see them)
+Error in inputs[["cov.fixed"]][[which(unlist(inputs[["cov.fixed"]]) ==  : 
+  attempt to select less than one element
+In addition: There were 15 warnings (use warnings() to see them)
+Error in inputs[["cov.fixed"]][[which(unlist(inputs[["cov.fixed"]]) ==  : 
+  attempt to select less than one element
+In addition: There were 15 warnings (use warnings() to see them)
+Error in inputs[["cov.fixed"]][[which(unlist(inputs[["cov.fixed"]]) ==  : 
+  attempt to select less than one element
+In addition: There were 15 warnings (use warnings() to see them)
+Error in `[[<-.data.frame`(`*tmp*`, ucov, value = numeric(0)) : 
+  replacement has 0 rows, data has 4524
+In addition: There were 15 warnings (use warnings() to see them)
+Error in inputs[["cov.fixed"]][[which(unlist(inputs[["cov.fixed"]]) ==  : 
+  attempt to select less than one element
+In addition: There were 15 warnings (use warnings() to see them)
+Error in inputs[["cov.fixed"]][[which(unlist(inputs[["cov.fixed"]]) ==  : 
+  attempt to select less than one element
+In addition: There were 15 warnings (use warnings() to see them)
+Error in inputs[["cov.fixed"]][[which(unlist(inputs[["cov.fixed"]]) ==  : 
+  attempt to select less than one element
+In addition: There were 15 warnings (use warnings() to see them)
+Error in inputs[["cov.fixed"]][[which(unlist(inputs[["cov.fixed"]]) ==  : 
+  attempt to select less than one element
+In addition: There were 15 warnings (use warnings() to see them)
+Error in inputs[["cov.fixed"]][[which(unlist(inputs[["cov.fixed"]]) ==  : 
+  attempt to select less than one element
+In addition: There were 15 warnings (use warnings() to see them)
+Error in inputs[["cov.fixed"]][[which(unlist(inputs[["cov.fixed"]]) ==  : 
+  attempt to select less than one element
+In addition: There were 15 warnings (use warnings() to see them)
+Error in inputs[["cov.fixed"]][[which(unlist(inputs[["cov.fixed"]]) ==  : 
+  attempt to select less than one element
+In addition: There were 15 warnings (use warnings() to see them)
+Error in inputs[["cov.fixed"]][[which(unlist(inputs[["cov.fixed"]]) ==  : 
+  attempt to select less than one element
+In addition: There were 15 warnings (use warnings() to see them)
+There were 16 warnings (use warnings() to see them)
+Error in print(summary(data[[independendVar]])) : 
+  error in evaluating the argument 'x' in selecting a method for function 'print': Error in summary(data[[independendVar]]) : 
+  error in evaluating the argument 'object' in selecting a method for function 'summary': Error in .subset2(x, i) : subscript out of bounds
+Error in inputs[["cov.fixed"]][[which(unlist(inputs[["cov.fixed"]]) ==  : 
+  attempt to select less than one element
+In addition: There were 15 warnings (use warnings() to see them)
+Error in inputs[["cov.fixed"]][[which(unlist(inputs[["cov.fixed"]]) ==  : 
+  attempt to select less than one element
+In addition: There were 15 warnings (use warnings() to see them)
+Error in inputs[["cov.fixed"]][[which(unlist(inputs[["cov.fixed"]]) ==  : 
+  attempt to select less than one element
+In addition: There were 15 warnings (use warnings() to see them)
+Error in inputs[["cov.fixed"]][[which(unlist(inputs[["cov.fixed"]]) ==  : 
+  attempt to select less than one element
+In addition: There were 15 warnings (use warnings() to see them)
+Error in inputs[["cov.fixed"]][[which(unlist(inputs[["cov.fixed"]]) ==  : 
+  attempt to select less than one element
+In addition: There were 15 warnings (use warnings() to see them)
+Error in inputs[["cov.fixed"]][[which(unlist(inputs[["cov.fixed"]]) ==  : 
+  attempt to select less than one element
+In addition: There were 15 warnings (use warnings() to see them)
+Error in inputs[["cov.fixed"]][[which(unlist(inputs[["cov.fixed"]]) ==  : 
+  attempt to select less than one element
+In addition: There were 15 warnings (use warnings() to see them)
+Error in inputs[["cov.fixed"]][[which(unlist(inputs[["cov.fixed"]]) ==  : 
+  attempt to select less than one element
+In addition: There were 15 warnings (use warnings() to see them)
+Error in inputs[["cov.fixed"]][[which(unlist(inputs[["cov.fixed"]]) ==  : 
+  attempt to select less than one element
+In addition: There were 15 warnings (use warnings() to see them)
+Error in inputs[["cov.fixed"]][[which(unlist(inputs[["cov.fixed"]]) ==  : 
+  attempt to select less than one element
+In addition: There were 15 warnings (use warnings() to see them)
+Error in inputs[["cov.fixed"]][[which(unlist(inputs[["cov.fixed"]]) ==  : 
+  attempt to select less than one element
+In addition: There were 15 warnings (use warnings() to see them)
+Error in inputs[["cov.fixed"]][[which(unlist(inputs[["cov.fixed"]]) ==  : 
+  attempt to select less than one element
+In addition: There were 15 warnings (use warnings() to see them)
+Error in inputs[["cov.fixed"]][[which(unlist(inputs[["cov.fixed"]]) ==  : 
+  attempt to select less than one element
+In addition: There were 15 warnings (use warnings() to see them)
+Error in inputs[["cov.fixed"]][[which(unlist(inputs[["cov.fixed"]]) ==  : 
+  attempt to select less than one element
+In addition: There were 15 warnings (use warnings() to see them)
+Error in inputs[["cov.fixed"]][[which(unlist(inputs[["cov.fixed"]]) ==  : 
+  attempt to select less than one element
+In addition: There were 15 warnings (use warnings() to see them)
+Error in inputs[["cov.fixed"]][[which(unlist(inputs[["cov.fixed"]]) ==  : 
+  attempt to select less than one element
+In addition: There were 15 warnings (use warnings() to see them)
+Error in inputs[["cov.fixed"]][[which(unlist(inputs[["cov.fixed"]]) ==  : 
+  attempt to select less than one element
+In addition: There were 15 warnings (use warnings() to see them)
+Error in inputs[["cov.fixed"]][[which(unlist(inputs[["cov.fixed"]]) ==  : 
+  attempt to select less than one element
+In addition: There were 15 warnings (use warnings() to see them)
+Error in inputs[["cov.fixed"]][[which(unlist(inputs[["cov.fixed"]]) ==  : 
+  attempt to select less than one element
+In addition: There were 15 warnings (use warnings() to see them)
+Error in inputs[["cov.fixed"]][[which(unlist(inputs[["cov.fixed"]]) ==  : 
+  attempt to select less than one element
+In addition: There were 15 warnings (use warnings() to see them)
+Error in inputs[["cov.fixed"]][[which(unlist(inputs[["cov.fixed"]]) ==  : 
+  attempt to select less than one element
+In addition: There were 15 warnings (use warnings() to see them)
+Error in inputs[["cov.fixed"]][[which(unlist(inputs[["cov.fixed"]]) ==  : 
+  attempt to select less than one element
+In addition: There were 15 warnings (use warnings() to see them)
+Error in inputs[["cov.fixed"]][[which(unlist(inputs[["cov.fixed"]]) ==  : 
+  attempt to select less than one element
+In addition: There were 15 warnings (use warnings() to see them)
+Error in inputs[["cov.fixed"]][[which(unlist(inputs[["cov.fixed"]]) ==  : 
+  attempt to select less than one element
+In addition: There were 15 warnings (use warnings() to see them)
+Error in inputs[["cov.fixed"]][[which(unlist(inputs[["cov.fixed"]]) ==  : 
+  attempt to select less than one element
+In addition: There were 15 warnings (use warnings() to see them)
+Error in inputs[["cov.fixed"]][[which(unlist(inputs[["cov.fixed"]]) ==  : 
+  attempt to select less than one element
+In addition: There were 15 warnings (use warnings() to see them)
+Error in inputs[["cov.fixed"]][[which(unlist(inputs[["cov.fixed"]]) ==  : 
+  attempt to select less than one element
+In addition: There were 15 warnings (use warnings() to see them)
+Error in inputs[["cov.fixed"]][[which(unlist(inputs[["cov.fixed"]]) ==  : 
+  attempt to select less than one element
+In addition: There were 15 warnings (use warnings() to see them)
+Error in model.frame.default(formula = nihtbx_picvocab_uncorrected ~ Age +  : 
+  invalid type (list) for variable 's(nihtbx_reading_theta)'
+In addition: There were 16 warnings (use warnings() to see them)
+Error in inputs[["cov.fixed"]][[which(unlist(inputs[["cov.fixed"]]) ==  : 
+  attempt to select less than one element
+In addition: There were 15 warnings (use warnings() to see them)
+Error in inputs[["cov.fixed"]][[which(unlist(inputs[["cov.fixed"]]) ==  : 
+  attempt to select less than one element
+In addition: There were 15 warnings (use warnings() to see them)
+Error in inputs[["cov.fixed"]][[which(unlist(inputs[["cov.fixed"]]) ==  : 
+  attempt to select less than one element
+In addition: There were 15 warnings (use warnings() to see them)
+Error in inputs[["cov.fixed"]][[which(unlist(inputs[["cov.fixed"]]) ==  : 
+  attempt to select less than one element
+In addition: There were 15 warnings (use warnings() to see them)
+Error in inputs[["cov.fixed"]][[which(unlist(inputs[["cov.fixed"]]) ==  : 
+  attempt to select less than one element
+In addition: There were 15 warnings (use warnings() to see them)
+Error in inputs[["cov.fixed"]][[which(unlist(inputs[["cov.fixed"]]) ==  : 
+  attempt to select less than one element
+In addition: There were 15 warnings (use warnings() to see them)
+Error in inputs[["cov.fixed"]][[which(unlist(inputs[["cov.fixed"]]) ==  : 
+  attempt to select less than one element
+In addition: There were 15 warnings (use warnings() to see them)
+Error in inputs[["cov.fixed"]][[which(unlist(inputs[["cov.fixed"]]) ==  : 
+  attempt to select less than one element
+In addition: There were 15 warnings (use warnings() to see them)
+Error in inputs[["cov.fixed"]][[which(unlist(inputs[["cov.fixed"]]) ==  : 
+  attempt to select less than one element
+In addition: There were 15 warnings (use warnings() to see them)
+Error in inputs[["cov.fixed"]][[which(unlist(inputs[["cov.fixed"]]) ==  : 
+  attempt to select less than one element
+In addition: There were 15 warnings (use warnings() to see them)
+Error in inputs[["cov.fixed"]][[which(unlist(inputs[["cov.fixed"]]) ==  : 
+  attempt to select less than one element
+In addition: There were 15 warnings (use warnings() to see them)
+Error in inputs[["cov.fixed"]][[which(unlist(inputs[["cov.fixed"]]) ==  : 
+  attempt to select less than one element
+In addition: There were 15 warnings (use warnings() to see them)
+Error in inputs[["cov.fixed"]][[which(unlist(inputs[["cov.fixed"]]) ==  : 
+  attempt to select less than one element
+In addition: There were 15 warnings (use warnings() to see them)
+Error in inputs[["cov.fixed"]][[which(unlist(inputs[["cov.fixed"]]) ==  : 
+  attempt to select less than one element
+In addition: There were 15 warnings (use warnings() to see them)
+Error in inputs[["cov.fixed"]][[which(unlist(inputs[["cov.fixed"]]) ==  : 
+  attempt to select less than one element
+In addition: There were 15 warnings (use warnings() to see them)
+Error in inputs[["cov.fixed"]][[which(unlist(inputs[["cov.fixed"]]) ==  : 
+  attempt to select less than one element
+In addition: There were 15 warnings (use warnings() to see them)
+Error in inputs[["cov.fixed"]][[which(unlist(inputs[["cov.fixed"]]) ==  : 
+  attempt to select less than one element
+In addition: There were 15 warnings (use warnings() to see them)
+Error in inputs[["cov.fixed"]][[which(unlist(inputs[["cov.fixed"]]) ==  : 
+  attempt to select less than one element
+In addition: There were 15 warnings (use warnings() to see them)
+Error in inputs[["cov.fixed"]][[which(unlist(inputs[["cov.fixed"]]) ==  : 
+  attempt to select less than one element
+In addition: There were 15 warnings (use warnings() to see them)
+Error in inputs[["cov.fixed"]][[which(unlist(inputs[["cov.fixed"]]) ==  : 
+  attempt to select less than one element
+In addition: There were 15 warnings (use warnings() to see them)
+Error in inputs[["cov.fixed"]][[which(unlist(inputs[["cov.fixed"]]) ==  : 
+  attempt to select less than one element
+In addition: There were 15 warnings (use warnings() to see them)
+Error in inputs[["cov.fixed"]][[which(unlist(inputs[["cov.fixed"]]) ==  : 
+  attempt to select less than one element
+In addition: There were 15 warnings (use warnings() to see them)
+Error in inputs[["cov.fixed"]][[which(unlist(inputs[["cov.fixed"]]) ==  : 
+  attempt to select less than one element
+In addition: There were 15 warnings (use warnings() to see them)
+Error in inputs[["cov.fixed"]][[which(unlist(inputs[["cov.fixed"]]) ==  : 
+  attempt to select less than one element
+In addition: There were 15 warnings (use warnings() to see them)
+Error in inputs[["cov.fixed"]][[which(unlist(inputs[["cov.fixed"]]) ==  : 
+  attempt to select less than one element
+In addition: There were 15 warnings (use warnings() to see them)
+Error in inputs[["cov.fixed"]][[which(unlist(inputs[["cov.fixed"]]) ==  : 
+  attempt to select less than one element
+In addition: There were 15 warnings (use warnings() to see them)
+Error in inputs[["cov.fixed"]][[which(unlist(inputs[["cov.fixed"]]) ==  : 
+  attempt to select less than one element
+In addition: There were 15 warnings (use warnings() to see them)
+Error in inputs[["cov.fixed"]][[which(unlist(inputs[["cov.fixed"]]) ==  : 
+  attempt to select less than one element
+In addition: There were 15 warnings (use warnings() to see them)
+Error in inputs[["cov.fixed"]][[which(unlist(inputs[["cov.fixed"]]) ==  : 
+  attempt to select less than one element
+In addition: There were 15 warnings (use warnings() to see them)
+Error in inputs[["cov.fixed"]][[which(unlist(inputs[["cov.fixed"]]) ==  : 
+  attempt to select less than one element
+In addition: There were 15 warnings (use warnings() to see them)
+Error in inputs[["cov.fixed"]][[which(unlist(inputs[["cov.fixed"]]) ==  : 
+  attempt to select less than one element
+In addition: There were 15 warnings (use warnings() to see them)
+Error in inputs[["cov.fixed"]][[which(unlist(inputs[["cov.fixed"]]) ==  : 
+  attempt to select less than one element
+In addition: There were 15 warnings (use warnings() to see them)
+Error in inputs[["cov.fixed"]][[which(unlist(inputs[["cov.fixed"]]) ==  : 
+  attempt to select less than one element
+In addition: There were 15 warnings (use warnings() to see them)
+Error in inputs[["cov.fixed"]][[which(unlist(inputs[["cov.fixed"]]) ==  : 
+  attempt to select less than one element
+In addition: There were 15 warnings (use warnings() to see them)
+Error in inputs[["cov.fixed"]][[which(unlist(inputs[["cov.fixed"]]) ==  : 
+  attempt to select less than one element
+In addition: There were 15 warnings (use warnings() to see them)
+Error in inputs[["cov.fixed"]][[which(unlist(inputs[["cov.fixed"]]) ==  : 
+  attempt to select less than one element
+In addition: There were 15 warnings (use warnings() to see them)
+Error in inputs[["cov.fixed"]][[which(unlist(inputs[["cov.fixed"]]) ==  : 
+  attempt to select less than one element
+In addition: There were 15 warnings (use warnings() to see them)
+Error in inputs[["cov.fixed"]][[which(unlist(inputs[["cov.fixed"]]) ==  : 
+  attempt to select less than one element
+In addition: There were 15 warnings (use warnings() to see them)
+Error in inputs[["cov.fixed"]][[which(unlist(inputs[["cov.fixed"]]) ==  : 
+  attempt to select less than one element
+In addition: There were 15 warnings (use warnings() to see them)
+Error in inputs[["cov.fixed"]][[which(unlist(inputs[["cov.fixed"]]) ==  : 
+  attempt to select less than one element
+In addition: There were 15 warnings (use warnings() to see them)
+Error in inputs[["cov.fixed"]][[which(unlist(inputs[["cov.fixed"]]) ==  : 
+  attempt to select less than one element
+In addition: There were 15 warnings (use warnings() to see them)
+Error in inputs[["cov.fixed"]][[which(unlist(inputs[["cov.fixed"]]) ==  : 
+  attempt to select less than one element
+In addition: There were 15 warnings (use warnings() to see them)
+Error in inputs[["cov.fixed"]][[which(unlist(inputs[["cov.fixed"]]) ==  : 
+  attempt to select less than one element
+In addition: There were 15 warnings (use warnings() to see them)
+Error in inputs[["cov.fixed"]][[which(unlist(inputs[["cov.fixed"]]) ==  : 
+  attempt to select less than one element
+In addition: There were 15 warnings (use warnings() to see them)
+Error in inputs[["cov.fixed"]][[which(unlist(inputs[["cov.fixed"]]) ==  : 
+  attempt to select less than one element
+In addition: There were 15 warnings (use warnings() to see them)
+Error in inputs[["cov.fixed"]][[which(unlist(inputs[["cov.fixed"]]) ==  : 
+  attempt to select less than one element
+In addition: There were 15 warnings (use warnings() to see them)
+Error in inputs[["cov.fixed"]][[which(unlist(inputs[["cov.fixed"]]) ==  : 
+  attempt to select less than one element
+In addition: There were 15 warnings (use warnings() to see them)
+Error in inputs[["cov.fixed"]][[which(unlist(inputs[["cov.fixed"]]) ==  : 
+  attempt to select less than one element
+In addition: There were 15 warnings (use warnings() to see them)
+Error in inputs[["cov.fixed"]][[which(unlist(inputs[["cov.fixed"]]) ==  : 
+  attempt to select less than one element
+In addition: There were 15 warnings (use warnings() to see them)
+Error in inputs[["cov.fixed"]][[which(unlist(inputs[["cov.fixed"]]) ==  : 
+  attempt to select less than one element
+In addition: There were 15 warnings (use warnings() to see them)
+Error in inputs[["cov.fixed"]][[which(unlist(inputs[["cov.fixed"]]) ==  : 
+  attempt to select less than one element
+In addition: There were 15 warnings (use warnings() to see them)
+Error in inputs[["cov.fixed"]][[which(unlist(inputs[["cov.fixed"]]) ==  : 
+  attempt to select less than one element
+In addition: There were 15 warnings (use warnings() to see them)
+Error in inputs[["cov.fixed"]][[which(unlist(inputs[["cov.fixed"]]) ==  : 
+  attempt to select less than one element
+In addition: There were 15 warnings (use warnings() to see them)
+Error in inputs[["cov.fixed"]][[which(unlist(inputs[["cov.fixed"]]) ==  : 
+  attempt to select less than one element
+In addition: There were 15 warnings (use warnings() to see them)
+Error in inputs[["cov.fixed"]][[which(unlist(inputs[["cov.fixed"]]) ==  : 
+  attempt to select less than one element
+In addition: There were 15 warnings (use warnings() to see them)
+Error in inputs[["cov.fixed"]][[which(unlist(inputs[["cov.fixed"]]) ==  : 
+  attempt to select less than one element
+In addition: There were 15 warnings (use warnings() to see them)
+Error in inputs[["cov.fixed"]][[which(unlist(inputs[["cov.fixed"]]) ==  : 
+  attempt to select less than one element
+In addition: There were 15 warnings (use warnings() to see them)
+Error in inputs[["cov.fixed"]][[which(unlist(inputs[["cov.fixed"]]) ==  : 
+  attempt to select less than one element
+In addition: There were 15 warnings (use warnings() to see them)
+Error in inputs[["cov.fixed"]][[which(unlist(inputs[["cov.fixed"]]) ==  : 
+  attempt to select less than one element
+In addition: There were 15 warnings (use warnings() to see them)
+Error in inputs[["cov.fixed"]][[which(unlist(inputs[["cov.fixed"]]) ==  : 
+  attempt to select less than one element
+In addition: There were 15 warnings (use warnings() to see them)
+Error in inputs[["cov.fixed"]][[which(unlist(inputs[["cov.fixed"]]) ==  : 
+  attempt to select less than one element
+In addition: There were 15 warnings (use warnings() to see them)
+Error in inputs[["cov.fixed"]][[which(unlist(inputs[["cov.fixed"]]) ==  : 
+  attempt to select less than one element
+In addition: There were 15 warnings (use warnings() to see them)
+Error in inputs[["cov.fixed"]][[which(unlist(inputs[["cov.fixed"]]) ==  : 
+  attempt to select less than one element
+In addition: There were 15 warnings (use warnings() to see them)
+Error in inputs[["cov.fixed"]][[which(unlist(inputs[["cov.fixed"]]) ==  : 
+  attempt to select less than one element
+In addition: There were 15 warnings (use warnings() to see them)
+Error in inputs[["cov.fixed"]][[which(unlist(inputs[["cov.fixed"]]) ==  : 
+  attempt to select less than one element
+In addition: There were 15 warnings (use warnings() to see them)
+Error in inputs[["cov.fixed"]][[which(unlist(inputs[["cov.fixed"]]) ==  : 
+  attempt to select less than one element
+In addition: There were 15 warnings (use warnings() to see them)
+Error in inputs[["cov.fixed"]][[which(unlist(inputs[["cov.fixed"]]) ==  : 
+  attempt to select less than one element
+In addition: There were 15 warnings (use warnings() to see them)
+Error in inputs[["cov.fixed"]][[which(unlist(inputs[["cov.fixed"]]) ==  : 
+  attempt to select less than one element
+In addition: There were 15 warnings (use warnings() to see them)
+Error in inputs[["cov.fixed"]][[which(unlist(inputs[["cov.fixed"]]) ==  : 
+  attempt to select less than one element
+In addition: There were 15 warnings (use warnings() to see them)
+Error in inputs[["cov.fixed"]][[which(unlist(inputs[["cov.fixed"]]) ==  : 
+  attempt to select less than one element
+In addition: There were 15 warnings (use warnings() to see them)
+Error in inputs[["cov.fixed"]][[which(unlist(inputs[["cov.fixed"]]) ==  : 
+  attempt to select less than one element
+In addition: There were 15 warnings (use warnings() to see them)
+Error in inputs[["cov.fixed"]][[which(unlist(inputs[["cov.fixed"]]) ==  : 
+  attempt to select less than one element
+In addition: There were 15 warnings (use warnings() to see them)
+Error in inputs[["cov.fixed"]][[which(unlist(inputs[["cov.fixed"]]) ==  : 
+  attempt to select less than one element
+In addition: There were 15 warnings (use warnings() to see them)
+Error in inputs[["cov.fixed"]][[which(unlist(inputs[["cov.fixed"]]) ==  : 
+  attempt to select less than one element
+In addition: There were 15 warnings (use warnings() to see them)
+Error in inputs[["cov.fixed"]][[which(unlist(inputs[["cov.fixed"]]) ==  : 
+  attempt to select less than one element
+In addition: There were 15 warnings (use warnings() to see them)
+Error in inputs[["cov.fixed"]][[which(unlist(inputs[["cov.fixed"]]) ==  : 
+  attempt to select less than one element
+In addition: There were 15 warnings (use warnings() to see them)
+Error in inputs[["cov.fixed"]][[which(unlist(inputs[["cov.fixed"]]) ==  : 
+  attempt to select less than one element
+In addition: There were 15 warnings (use warnings() to see them)
+Error in inputs[["cov.fixed"]][[which(unlist(inputs[["cov.fixed"]]) ==  : 
+  attempt to select less than one element
+In addition: There were 15 warnings (use warnings() to see them)
+Error in inputs[["cov.fixed"]][[which(unlist(inputs[["cov.fixed"]]) ==  : 
+  attempt to select less than one element
+In addition: There were 15 warnings (use warnings() to see them)
+Error in inputs[["cov.fixed"]][[which(unlist(inputs[["cov.fixed"]]) ==  : 
+  attempt to select less than one element
+In addition: There were 15 warnings (use warnings() to see them)
+Error in inputs[["cov.fixed"]][[which(unlist(inputs[["cov.fixed"]]) ==  : 
+  attempt to select less than one element
+In addition: There were 15 warnings (use warnings() to see them)
+Error in inputs[["cov.fixed"]][[which(unlist(inputs[["cov.fixed"]]) ==  : 
+  attempt to select less than one element
+In addition: There were 15 warnings (use warnings() to see them)
+Error in inputs[["cov.fixed"]][[which(unlist(inputs[["cov.fixed"]]) ==  : 
+  attempt to select less than one element
+In addition: There were 15 warnings (use warnings() to see them)
+Error in inputs[["cov.fixed"]][[which(unlist(inputs[["cov.fixed"]]) ==  : 
+  attempt to select less than one element
+In addition: There were 15 warnings (use warnings() to see them)
+Error in inputs[["cov.fixed"]][[which(unlist(inputs[["cov.fixed"]]) ==  : 
+  attempt to select less than one element
+In addition: There were 15 warnings (use warnings() to see them)
+Error in inputs[["cov.fixed"]][[which(unlist(inputs[["cov.fixed"]]) ==  : 
+  attempt to select less than one element
+In addition: There were 15 warnings (use warnings() to see them)
+Error in inputs[["cov.fixed"]][[which(unlist(inputs[["cov.fixed"]]) ==  : 
+  attempt to select less than one element
+In addition: There were 15 warnings (use warnings() to see them)
+Error in inputs[["cov.fixed"]][[which(unlist(inputs[["cov.fixed"]]) ==  : 
+  attempt to select less than one element
+In addition: There were 15 warnings (use warnings() to see them)
+Error in inputs[["cov.fixed"]][[which(unlist(inputs[["cov.fixed"]]) ==  : 
+  attempt to select less than one element
+In addition: There were 15 warnings (use warnings() to see them)
+Error in inputs[["cov.fixed"]][[which(unlist(inputs[["cov.fixed"]]) ==  : 
+  attempt to select less than one element
+In addition: There were 15 warnings (use warnings() to see them)
+Error in inputs[["cov.fixed"]][[which(unlist(inputs[["cov.fixed"]]) ==  : 
+  attempt to select less than one element
+In addition: There were 15 warnings (use warnings() to see them)
+Error in inputs[["cov.fixed"]][[which(unlist(inputs[["cov.fixed"]]) ==  : 
+  attempt to select less than one element
+In addition: There were 15 warnings (use warnings() to see them)
+Error in inputs[["cov.fixed"]][[which(unlist(inputs[["cov.fixed"]]) ==  : 
+  attempt to select less than one element
+In addition: There were 15 warnings (use warnings() to see them)
+Error in inputs[["cov.fixed"]][[which(unlist(inputs[["cov.fixed"]]) ==  : 
+  attempt to select less than one element
+In addition: There were 15 warnings (use warnings() to see them)
+Error in inputs[["cov.fixed"]][[which(unlist(inputs[["cov.fixed"]]) ==  : 
+  attempt to select less than one element
+In addition: There were 15 warnings (use warnings() to see them)
+Error in inputs[["cov.fixed"]][[which(unlist(inputs[["cov.fixed"]]) ==  : 
+  attempt to select less than one element
+In addition: There were 15 warnings (use warnings() to see them)
+There were 16 warnings (use warnings() to see them)
+Error in print(summary(data[[independendVar]])) : 
+  error in evaluating the argument 'x' in selecting a method for function 'print': Error in summary(data[[independendVar]]) : 
+  error in evaluating the argument 'object' in selecting a method for function 'summary': Error in .subset2(x, i) : subscript out of bounds
+Error in inputs[["cov.fixed"]][[which(unlist(inputs[["cov.fixed"]]) ==  : 
+  attempt to select less than one element
+In addition: There were 15 warnings (use warnings() to see them)
+Error in inputs[["cov.fixed"]][[which(unlist(inputs[["cov.fixed"]]) ==  : 
+  attempt to select less than one element
+In addition: There were 15 warnings (use warnings() to see them)
+Error in inputs[["cov.fixed"]][[which(unlist(inputs[["cov.fixed"]]) ==  : 
+  attempt to select less than one element
+In addition: There were 15 warnings (use warnings() to see them)
+Error in inputs[["cov.fixed"]][[which(unlist(inputs[["cov.fixed"]]) ==  : 
+  attempt to select less than one element
+In addition: There were 15 warnings (use warnings() to see them)
+There were 16 warnings (use warnings() to see them)
+Error in print(summary(data[[independendVar]])) : 
+  error in evaluating the argument 'x' in selecting a method for function 'print': Error in summary(data[[independendVar]]) : 
+  error in evaluating the argument 'object' in selecting a method for function 'summary': Error in .subset2(x, i) : subscript out of bounds
+Error in inputs[["cov.fixed"]][[which(unlist(inputs[["cov.fixed"]]) ==  : 
+  attempt to select less than one element
+In addition: There were 15 warnings (use warnings() to see them)
+Error in inputs[["cov.fixed"]][[which(unlist(inputs[["cov.fixed"]]) ==  : 
+  attempt to select less than one element
+In addition: There were 15 warnings (use warnings() to see them)
+Error in inputs[["cov.fixed"]][[which(unlist(inputs[["cov.fixed"]]) ==  : 
+  attempt to select less than one element
+In addition: There were 15 warnings (use warnings() to see them)
+Error in inputs[["cov.fixed"]][[which(unlist(inputs[["cov.fixed"]]) ==  : 
+  attempt to select less than one element
+In addition: There were 15 warnings (use warnings() to see them)
+Error in inputs[["cov.fixed"]][[which(unlist(inputs[["cov.fixed"]]) ==  : 
+  attempt to select less than one element
+In addition: There were 15 warnings (use warnings() to see them)
+Error in inputs[["cov.fixed"]][[which(unlist(inputs[["cov.fixed"]]) ==  : 
+  attempt to select less than one element
+In addition: There were 15 warnings (use warnings() to see them)
+Error in inputs[["cov.fixed"]][[which(unlist(inputs[["cov.fixed"]]) ==  : 
+  attempt to select less than one element
+In addition: There were 15 warnings (use warnings() to see them)
+Error in inputs[["cov.fixed"]][[which(unlist(inputs[["cov.fixed"]]) ==  : 
+  attempt to select less than one element
+In addition: There were 15 warnings (use warnings() to see them)
+Error in inputs[["cov.fixed"]][[which(unlist(inputs[["cov.fixed"]]) ==  : 
+  attempt to select less than one element
+In addition: There were 15 warnings (use warnings() to see them)
+Error in inputs[["cov.fixed"]][[which(unlist(inputs[["cov.fixed"]]) ==  : 
+  attempt to select less than one element
+In addition: There were 15 warnings (use warnings() to see them)
+Error in inputs[["cov.fixed"]][[which(unlist(inputs[["cov.fixed"]]) ==  : 
+  attempt to select less than one element
+In addition: There were 15 warnings (use warnings() to see them)
+Error in inputs[["cov.fixed"]][[which(unlist(inputs[["cov.fixed"]]) ==  : 
+  attempt to select less than one element
+In addition: There were 15 warnings (use warnings() to see them)
+Error in inputs[["cov.fixed"]][[which(unlist(inputs[["cov.fixed"]]) ==  : 
+  attempt to select less than one element
+In addition: There were 15 warnings (use warnings() to see them)
+Error in inputs[["cov.fixed"]][[which(unlist(inputs[["cov.fixed"]]) ==  : 
+  attempt to select less than one element
+In addition: There were 15 warnings (use warnings() to see them)
+Error in inputs[["cov.fixed"]][[which(unlist(inputs[["cov.fixed"]]) ==  : 
+  attempt to select less than one element
+In addition: There were 15 warnings (use warnings() to see them)
+Error in inputs[["cov.fixed"]][[which(unlist(inputs[["cov.fixed"]]) ==  : 
+  attempt to select less than one element
+In addition: There were 15 warnings (use warnings() to see them)
+Error in inputs[["cov.fixed"]][[which(unlist(inputs[["cov.fixed"]]) ==  : 
+  attempt to select less than one element
+In addition: There were 15 warnings (use warnings() to see them)
+Error in inputs[["cov.fixed"]][[which(unlist(inputs[["cov.fixed"]]) ==  : 
+  attempt to select less than one element
+In addition: There were 15 warnings (use warnings() to see them)
+Error in inputs[["cov.fixed"]][[which(unlist(inputs[["cov.fixed"]]) ==  : 
+  attempt to select less than one element
+In addition: There were 15 warnings (use warnings() to see them)
+Error in inputs[["cov.fixed"]][[which(unlist(inputs[["cov.fixed"]]) ==  : 
+  attempt to select less than one element
+In addition: There were 15 warnings (use warnings() to see them)
+Error in inputs[["cov.fixed"]][[which(unlist(inputs[["cov.fixed"]]) ==  : 
+  attempt to select less than one element
+In addition: There were 15 warnings (use warnings() to see them)
+Error in inputs[["cov.fixed"]][[which(unlist(inputs[["cov.fixed"]]) ==  : 
+  attempt to select less than one element
+In addition: There were 15 warnings (use warnings() to see them)
+Error in inputs[["cov.fixed"]][[which(unlist(inputs[["cov.fixed"]]) ==  : 
+  attempt to select less than one element
+In addition: There were 15 warnings (use warnings() to see them)
+Error in inputs[["cov.fixed"]][[which(unlist(inputs[["cov.fixed"]]) ==  : 
+  attempt to select less than one element
+In addition: There were 15 warnings (use warnings() to see them)
+Error in inputs[["cov.fixed"]][[which(unlist(inputs[["cov.fixed"]]) ==  : 
+  attempt to select less than one element
+In addition: There were 15 warnings (use warnings() to see them)
+Error in inputs[["cov.fixed"]][[which(unlist(inputs[["cov.fixed"]]) ==  : 
+  attempt to select less than one element
+In addition: There were 15 warnings (use warnings() to see them)
+Error in inputs[["cov.fixed"]][[which(unlist(inputs[["cov.fixed"]]) ==  : 
+  attempt to select less than one element
+In addition: There were 15 warnings (use warnings() to see them)
+Error in inputs[["cov.fixed"]][[which(unlist(inputs[["cov.fixed"]]) ==  : 
+  attempt to select less than one element
+In addition: There were 15 warnings (use warnings() to see them)
+Error in inputs[["cov.fixed"]][[which(unlist(inputs[["cov.fixed"]]) ==  : 
+  attempt to select less than one element
+In addition: There were 15 warnings (use warnings() to see them)
+Error in inputs[["cov.fixed"]][[which(unlist(inputs[["cov.fixed"]]) ==  : 
+  attempt to select less than one element
+In addition: There were 15 warnings (use warnings() to see them)
+Error in inputs[["cov.fixed"]][[which(unlist(inputs[["cov.fixed"]]) ==  : 
+  attempt to select less than one element
+In addition: There were 15 warnings (use warnings() to see them)
+Error in inputs[["cov.fixed"]][[which(unlist(inputs[["cov.fixed"]]) ==  : 
+  attempt to select less than one element
+In addition: There were 15 warnings (use warnings() to see them)
+Error in inputs[["cov.fixed"]][[which(unlist(inputs[["cov.fixed"]]) ==  : 
+  attempt to select less than one element
+In addition: There were 15 warnings (use warnings() to see them)
+Error in inputs[["cov.fixed"]][[which(unlist(inputs[["cov.fixed"]]) ==  : 
+  attempt to select less than one element
+In addition: There were 15 warnings (use warnings() to see them)
+Error in inputs[["cov.fixed"]][[which(unlist(inputs[["cov.fixed"]]) ==  : 
+  attempt to select less than one element
+In addition: There were 15 warnings (use warnings() to see them)
+Error in inputs[["cov.fixed"]][[which(unlist(inputs[["cov.fixed"]]) ==  : 
+  attempt to select less than one element
+In addition: There were 15 warnings (use warnings() to see them)
+Error in inputs[["cov.fixed"]][[which(unlist(inputs[["cov.fixed"]]) ==  : 
+  attempt to select less than one element
+In addition: There were 15 warnings (use warnings() to see them)
+Error in inputs[["cov.fixed"]][[which(unlist(inputs[["cov.fixed"]]) ==  : 
+  attempt to select less than one element
+In addition: There were 15 warnings (use warnings() to see them)
+Error in inputs[["cov.fixed"]][[which(unlist(inputs[["cov.fixed"]]) ==  : 
+  attempt to select less than one element
+In addition: There were 15 warnings (use warnings() to see them)
+Error in inputs[["cov.fixed"]][[which(unlist(inputs[["cov.fixed"]]) ==  : 
+  attempt to select less than one element
+In addition: There were 15 warnings (use warnings() to see them)
+Error in inputs[["cov.fixed"]][[which(unlist(inputs[["cov.fixed"]]) ==  : 
+  attempt to select less than one element
+In addition: There were 15 warnings (use warnings() to see them)
+Error in inputs[["cov.fixed"]][[which(unlist(inputs[["cov.fixed"]]) ==  : 
+  attempt to select less than one element
+In addition: There were 15 warnings (use warnings() to see them)
+Error in inputs[["cov.fixed"]][[which(unlist(inputs[["cov.fixed"]]) ==  : 
+  attempt to select less than one element
+In addition: There were 15 warnings (use warnings() to see them)
+Error in inputs[["cov.fixed"]][[which(unlist(inputs[["cov.fixed"]]) ==  : 
+  attempt to select less than one element
+In addition: There were 15 warnings (use warnings() to see them)
+Error in inputs[["cov.fixed"]][[which(unlist(inputs[["cov.fixed"]]) ==  : 
+  attempt to select less than one element
+In addition: There were 15 warnings (use warnings() to see them)
+Error in inputs[["cov.fixed"]][[which(unlist(inputs[["cov.fixed"]]) ==  : 
+  attempt to select less than one element
+In addition: There were 15 warnings (use warnings() to see them)
+Error in inputs[["cov.fixed"]][[which(unlist(inputs[["cov.fixed"]]) ==  : 
+  attempt to select less than one element
+In addition: There were 15 warnings (use warnings() to see them)
+Error in inputs[["cov.fixed"]][[which(unlist(inputs[["cov.fixed"]]) ==  : 
+  attempt to select less than one element
+In addition: There were 15 warnings (use warnings() to see them)
+Error in inputs[["cov.fixed"]][[which(unlist(inputs[["cov.fixed"]]) ==  : 
+  attempt to select less than one element
+In addition: There were 15 warnings (use warnings() to see them)
+Error in inputs[["cov.fixed"]][[which(unlist(inputs[["cov.fixed"]]) ==  : 
+  attempt to select less than one element
+In addition: There were 15 warnings (use warnings() to see them)
+Error in inputs[["cov.fixed"]][[which(unlist(inputs[["cov.fixed"]]) ==  : 
+  attempt to select less than one element
+In addition: There were 15 warnings (use warnings() to see them)
+Error in inputs[["cov.fixed"]][[which(unlist(inputs[["cov.fixed"]]) ==  : 
+  attempt to select less than one element
+In addition: There were 15 warnings (use warnings() to see them)
+Error in inputs[["cov.fixed"]][[which(unlist(inputs[["cov.fixed"]]) ==  : 
+  attempt to select less than one element
+In addition: There were 15 warnings (use warnings() to see them)
+Error in inputs[["cov.fixed"]][[which(unlist(inputs[["cov.fixed"]]) ==  : 
+  attempt to select less than one element
+In addition: There were 15 warnings (use warnings() to see them)
+Error in inputs[["cov.fixed"]][[which(unlist(inputs[["cov.fixed"]]) ==  : 
+  attempt to select less than one element
+In addition: There were 15 warnings (use warnings() to see them)
+Error in inputs[["cov.fixed"]][[which(unlist(inputs[["cov.fixed"]]) ==  : 
+  attempt to select less than one element
+In addition: There were 15 warnings (use warnings() to see them)
+Error in inputs[["cov.fixed"]][[which(unlist(inputs[["cov.fixed"]]) ==  : 
+  attempt to select less than one element
+In addition: There were 15 warnings (use warnings() to see them)
+Error in inputs[["cov.fixed"]][[which(unlist(inputs[["cov.fixed"]]) ==  : 
+  attempt to select less than one element
+In addition: There were 15 warnings (use warnings() to see them)
+Error in inputs[["cov.fixed"]][[which(unlist(inputs[["cov.fixed"]]) ==  : 
+  attempt to select less than one element
+In addition: There were 15 warnings (use warnings() to see them)
+Error in inputs[["cov.fixed"]][[which(unlist(inputs[["cov.fixed"]]) ==  : 
+  attempt to select less than one element
+In addition: There were 15 warnings (use warnings() to see them)
+Error in inputs[["cov.fixed"]][[which(unlist(inputs[["cov.fixed"]]) ==  : 
+  attempt to select less than one element
+In addition: There were 15 warnings (use warnings() to see them)
+Error in inputs[["cov.fixed"]][[which(unlist(inputs[["cov.fixed"]]) ==  : 
+  attempt to select less than one element
+In addition: There were 15 warnings (use warnings() to see them)
+Error in inputs[["cov.fixed"]][[which(unlist(inputs[["cov.fixed"]]) ==  : 
+  attempt to select less than one element
+In addition: There were 15 warnings (use warnings() to see them)
+Error in inputs[["cov.fixed"]][[which(unlist(inputs[["cov.fixed"]]) ==  : 
+  attempt to select less than one element
+In addition: There were 15 warnings (use warnings() to see them)
+Error in inputs[["cov.fixed"]][[which(unlist(inputs[["cov.fixed"]]) ==  : 
+  attempt to select less than one element
+In addition: There were 15 warnings (use warnings() to see them)
+Error in inputs[["cov.fixed"]][[which(unlist(inputs[["cov.fixed"]]) ==  : 
+  attempt to select less than one element
+In addition: There were 15 warnings (use warnings() to see them)
+Error in inputs[["cov.fixed"]][[which(unlist(inputs[["cov.fixed"]]) ==  : 
+  attempt to select less than one element
+In addition: There were 15 warnings (use warnings() to see them)
+Error in inputs[["cov.fixed"]][[which(unlist(inputs[["cov.fixed"]]) ==  : 
+  attempt to select less than one element
+In addition: There were 15 warnings (use warnings() to see them)
+Error in inputs[["cov.fixed"]][[which(unlist(inputs[["cov.fixed"]]) ==  : 
+  attempt to select less than one element
+In addition: There were 15 warnings (use warnings() to see them)
+Error in inputs[["cov.fixed"]][[which(unlist(inputs[["cov.fixed"]]) ==  : 
+  attempt to select less than one element
+In addition: There were 15 warnings (use warnings() to see them)
+Error in inputs[["cov.fixed"]][[which(unlist(inputs[["cov.fixed"]]) ==  : 
+  attempt to select less than one element
+In addition: There were 15 warnings (use warnings() to see them)
+Error in inputs[["cov.fixed"]][[which(unlist(inputs[["cov.fixed"]]) ==  : 
+  attempt to select less than one element
+In addition: There were 15 warnings (use warnings() to see them)
+Error in inputs[["cov.fixed"]][[which(unlist(inputs[["cov.fixed"]]) ==  : 
+  attempt to select less than one element
+In addition: There were 15 warnings (use warnings() to see them)
+Error in inputs[["cov.fixed"]][[which(unlist(inputs[["cov.fixed"]]) ==  : 
+  attempt to select less than one element
+In addition: There were 15 warnings (use warnings() to see them)
+Error in inputs[["cov.fixed"]][[which(unlist(inputs[["cov.fixed"]]) ==  : 
+  attempt to select less than one element
+In addition: There were 15 warnings (use warnings() to see them)
+Error in inputs[["cov.fixed"]][[which(unlist(inputs[["cov.fixed"]]) ==  : 
+  attempt to select less than one element
+In addition: There were 15 warnings (use warnings() to see them)
+Error in inputs[["cov.fixed"]][[which(unlist(inputs[["cov.fixed"]]) ==  : 
+  attempt to select less than one element
+In addition: There were 15 warnings (use warnings() to see them)
+Error in inputs[["cov.fixed"]][[which(unlist(inputs[["cov.fixed"]]) ==  : 
+  attempt to select less than one element
+In addition: There were 15 warnings (use warnings() to see them)
+Error in inputs[["cov.fixed"]][[which(unlist(inputs[["cov.fixed"]]) ==  : 
+  attempt to select less than one element
+In addition: There were 15 warnings (use warnings() to see them)
+Error in inputs[["cov.fixed"]][[which(unlist(inputs[["cov.fixed"]]) ==  : 
+  attempt to select less than one element
+In addition: There were 15 warnings (use warnings() to see them)
+Error in inputs[["cov.fixed"]][[which(unlist(inputs[["cov.fixed"]]) ==  : 
+  attempt to select less than one element
+In addition: There were 15 warnings (use warnings() to see them)
+Error in inputs[["cov.fixed"]][[which(unlist(inputs[["cov.fixed"]]) ==  : 
+  attempt to select less than one element
+In addition: There were 15 warnings (use warnings() to see them)
+Error in inputs[["cov.fixed"]][[which(unlist(inputs[["cov.fixed"]]) ==  : 
+  attempt to select less than one element
+In addition: There were 15 warnings (use warnings() to see them)
+Error in inputs[["cov.fixed"]][[which(unlist(inputs[["cov.fixed"]]) ==  : 
+  attempt to select less than one element
+In addition: There were 15 warnings (use warnings() to see them)
+Error in inputs[["cov.fixed"]][[which(unlist(inputs[["cov.fixed"]]) ==  : 
+  attempt to select less than one element
+In addition: There were 15 warnings (use warnings() to see them)
+Error in inputs[["cov.fixed"]][[which(unlist(inputs[["cov.fixed"]]) ==  : 
+  attempt to select less than one element
+In addition: There were 15 warnings (use warnings() to see them)
+Error in inputs[["cov.fixed"]][[which(unlist(inputs[["cov.fixed"]]) ==  : 
+  attempt to select less than one element
+In addition: There were 15 warnings (use warnings() to see them)
+Error in inputs[["cov.fixed"]][[which(unlist(inputs[["cov.fixed"]]) ==  : 
+  attempt to select less than one element
+In addition: There were 15 warnings (use warnings() to see them)
+Error in inputs[["cov.fixed"]][[which(unlist(inputs[["cov.fixed"]]) ==  : 
+  attempt to select less than one element
+In addition: There were 15 warnings (use warnings() to see them)
+Error in inputs[["cov.fixed"]][[which(unlist(inputs[["cov.fixed"]]) ==  : 
+  attempt to select less than one element
+In addition: There were 15 warnings (use warnings() to see them)
+Error in inputs[["cov.fixed"]][[which(unlist(inputs[["cov.fixed"]]) ==  : 
+  attempt to select less than one element
+In addition: There were 15 warnings (use warnings() to see them)
+Error in inputs[["cov.fixed"]][[which(unlist(inputs[["cov.fixed"]]) ==  : 
+  attempt to select less than one element
+In addition: There were 15 warnings (use warnings() to see them)
+Error in inputs[["cov.fixed"]][[which(unlist(inputs[["cov.fixed"]]) ==  : 
+  attempt to select less than one element
+In addition: There were 15 warnings (use warnings() to see them)
+Error in inputs[["cov.fixed"]][[which(unlist(inputs[["cov.fixed"]]) ==  : 
+  attempt to select less than one element
+In addition: There were 15 warnings (use warnings() to see them)
+Error in inputs[["cov.fixed"]][[which(unlist(inputs[["cov.fixed"]]) ==  : 
+  attempt to select less than one element
+In addition: There were 15 warnings (use warnings() to see them)
+Error in inputs[["cov.fixed"]][[which(unlist(inputs[["cov.fixed"]]) ==  : 
+  attempt to select less than one element
+In addition: There were 15 warnings (use warnings() to see them)
+Error in inputs[["cov.fixed"]][[which(unlist(inputs[["cov.fixed"]]) ==  : 
+  attempt to select less than one element
+In addition: There were 15 warnings (use warnings() to see them)
+Error in inputs[["cov.fixed"]][[which(unlist(inputs[["cov.fixed"]]) ==  : 
+  attempt to select less than one element
+In addition: There were 15 warnings (use warnings() to see them)
+Error in inputs[["cov.fixed"]][[which(unlist(inputs[["cov.fixed"]]) ==  : 
+  attempt to select less than one element
+In addition: There were 15 warnings (use warnings() to see them)
+Error in inputs[["cov.fixed"]][[which(unlist(inputs[["cov.fixed"]]) ==  : 
+  attempt to select less than one element
+In addition: There were 15 warnings (use warnings() to see them)
+Error in inputs[["cov.fixed"]][[which(unlist(inputs[["cov.fixed"]]) ==  : 
+  attempt to select less than one element
+In addition: There were 15 warnings (use warnings() to see them)
+Error in inputs[["cov.fixed"]][[which(unlist(inputs[["cov.fixed"]]) ==  : 
+  attempt to select less than one element
+In addition: There were 15 warnings (use warnings() to see them)
+Error in inputs[["cov.fixed"]][[which(unlist(inputs[["cov.fixed"]]) ==  : 
+  attempt to select less than one element
+In addition: There were 15 warnings (use warnings() to see them)
+Error in inputs[["cov.fixed"]][[which(unlist(inputs[["cov.fixed"]]) ==  : 
+  attempt to select less than one element
+In addition: There were 15 warnings (use warnings() to see them)
+Error in inputs[["cov.fixed"]][[which(unlist(inputs[["cov.fixed"]]) ==  : 
+  attempt to select less than one element
+In addition: There were 15 warnings (use warnings() to see them)
+Error in inputs[["cov.fixed"]][[which(unlist(inputs[["cov.fixed"]]) ==  : 
+  attempt to select less than one element
+In addition: There were 15 warnings (use warnings() to see them)
+Error in inputs[["cov.fixed"]][[which(unlist(inputs[["cov.fixed"]]) ==  : 
+  attempt to select less than one element
+In addition: There were 15 warnings (use warnings() to see them)
+Error in inputs[["cov.fixed"]][[which(unlist(inputs[["cov.fixed"]]) ==  : 
+  attempt to select less than one element
+In addition: There were 15 warnings (use warnings() to see them)
+Error in inputs[["cov.fixed"]][[which(unlist(inputs[["cov.fixed"]]) ==  : 
+  attempt to select less than one element
+In addition: There were 15 warnings (use warnings() to see them)
+Error in inputs[["cov.fixed"]][[which(unlist(inputs[["cov.fixed"]]) ==  : 
+  attempt to select less than one element
+In addition: There were 15 warnings (use warnings() to see them)
+Error in inputs[["cov.fixed"]][[which(unlist(inputs[["cov.fixed"]]) ==  : 
+  attempt to select less than one element
+In addition: There were 15 warnings (use warnings() to see them)
+Error in inputs[["cov.fixed"]][[which(unlist(inputs[["cov.fixed"]]) ==  : 
+  attempt to select less than one element
+In addition: There were 15 warnings (use warnings() to see them)
+Error in inputs[["cov.fixed"]][[which(unlist(inputs[["cov.fixed"]]) ==  : 
+  attempt to select less than one element
+In addition: There were 15 warnings (use warnings() to see them)
+Error in inputs[["cov.fixed"]][[which(unlist(inputs[["cov.fixed"]]) ==  : 
+  attempt to select less than one element
+In addition: There were 15 warnings (use warnings() to see them)
+Error in inputs[["cov.fixed"]][[which(unlist(inputs[["cov.fixed"]]) ==  : 
+  attempt to select less than one element
+In addition: There were 15 warnings (use warnings() to see them)
+Error in inputs[["cov.fixed"]][[which(unlist(inputs[["cov.fixed"]]) ==  : 
+  attempt to select less than one element
+In addition: There were 15 warnings (use warnings() to see them)
+Error in inputs[["cov.fixed"]][[which(unlist(inputs[["cov.fixed"]]) ==  : 
+  attempt to select less than one element
+In addition: There were 15 warnings (use warnings() to see them)
+Error in inputs[["cov.fixed"]][[which(unlist(inputs[["cov.fixed"]]) ==  : 
+  attempt to select less than one element
+In addition: There were 15 warnings (use warnings() to see them)
+Error in inputs[["cov.fixed"]][[which(unlist(inputs[["cov.fixed"]]) ==  : 
+  attempt to select less than one element
+In addition: There were 15 warnings (use warnings() to see them)
+Error in inputs[["cov.fixed"]][[which(unlist(inputs[["cov.fixed"]]) ==  : 
+  attempt to select less than one element
+In addition: There were 15 warnings (use warnings() to see them)
+Error in inputs[["cov.fixed"]][[which(unlist(inputs[["cov.fixed"]]) ==  : 
+  attempt to select less than one element
+In addition: There were 15 warnings (use warnings() to see them)
+Error in inputs[["cov.fixed"]][[which(unlist(inputs[["cov.fixed"]]) ==  : 
+  attempt to select less than one element
+In addition: There were 15 warnings (use warnings() to see them)
+Error in inputs[["cov.fixed"]][[which(unlist(inputs[["cov.fixed"]]) ==  : 
+  attempt to select less than one element
+In addition: There were 15 warnings (use warnings() to see them)
+Error in inputs[["cov.fixed"]][[which(unlist(inputs[["cov.fixed"]]) ==  : 
+  attempt to select less than one element
+In addition: There were 15 warnings (use warnings() to see them)
+Error in inputs[["cov.fixed"]][[which(unlist(inputs[["cov.fixed"]]) ==  : 
+  attempt to select less than one element
+In addition: There were 15 warnings (use warnings() to see them)
+Error in inputs[["cov.fixed"]][[which(unlist(inputs[["cov.fixed"]]) ==  : 
+  attempt to select less than one element
+In addition: There were 15 warnings (use warnings() to see them)
+Error in inputs[["cov.fixed"]][[which(unlist(inputs[["cov.fixed"]]) ==  : 
+  attempt to select less than one element
+In addition: There were 15 warnings (use warnings() to see them)
+Error in inputs[["cov.fixed"]][[which(unlist(inputs[["cov.fixed"]]) ==  : 
+  attempt to select less than one element
+In addition: There were 15 warnings (use warnings() to see them)
+Error in inputs[["cov.fixed"]][[which(unlist(inputs[["cov.fixed"]]) ==  : 
+  attempt to select less than one element
+In addition: There were 15 warnings (use warnings() to see them)
+Error in inputs[["cov.fixed"]][[which(unlist(inputs[["cov.fixed"]]) ==  : 
+  attempt to select less than one element
+In addition: There were 15 warnings (use warnings() to see them)
+Error in inputs[["cov.fixed"]][[which(unlist(inputs[["cov.fixed"]]) ==  : 
+  attempt to select less than one element
+In addition: There were 15 warnings (use warnings() to see them)
+Error in inputs[["cov.fixed"]][[which(unlist(inputs[["cov.fixed"]]) ==  : 
+  attempt to select less than one element
+In addition: There were 15 warnings (use warnings() to see them)

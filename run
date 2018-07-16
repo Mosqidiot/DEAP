@@ -1,0 +1,30 @@
+#!/bin/bash
+
+image_name=$1
+container_name=$2
+deap_version_tag=$3
+port=$4
+matlab_path=$5
+modelbuilder_data_path=$6
+modelbuilder_recipes_path=$7
+saved_models_path=$8
+permissions_file_path=$9
+
+USAGE="Usage: run <image ID / name:tag> <container name> <DEAP git version tag> <port> <matlab path> <ModelBuilder data path> <ModelBuilder recipes path> <NewDataExpo saved models path> <permissions json path>"
+
+if [[ $# -eq 9 ]]; then
+    docker run -d \
+               --name ${container_name} \
+               -p ${port}:80 \
+               -v data:/data \
+               -v ${matlab_path}:/matlab \
+               -v ${modelbuilder_data_path}:/var/www/html/data \
+               -v ${modelbuilder_recipes_path}:/var/www/html/applications/ModelBuilder/viewer/recipes \
+               -v ${saved_models_path}:/var/www/html/applications/NewDataExpo/usercache \
+               -v ${permissions_file_path}:/var/www/html/code/php/passwords.json \
+               ${image_name} \
+               start
+           #--restart unless-stopped \
+else
+    echo ${USAGE}
+fi
